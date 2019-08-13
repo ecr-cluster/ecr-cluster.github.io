@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Cluster | ECR Cluster Documentation Site</title>
+
+
+<link rel="stylesheet" href="/book.min.6c7317d2e8552a0ac3ea8fd4ba500c3dfb1cc9c74e7afd73eee6d729751fad30.css">
+
+
+<script defer src="/search.min.64ed5db2dffc00862419b96313d87448c65d3d31155591ed72a222aa20423771.js"></script>
+
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://ecr-cluster.github.io/">ECR Cluster Documentation Site</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fthe-cluster\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="/"><strong>About</strong></a></li>
+<li><a href="/register"><strong>Register</strong></a></li>
+<li><strong>Documentation</strong>
+
+<ul>
+<li><a href="/docs/the-cluster/">The Cluster</a></li>
+<li><a href="/docs/quick-start/">Quick Start</a></li>
+<li><a href="/docs/how-to/">How To</a></li>
+</ul></li>
+<li><a href="/faq"><strong>FAQ</strong></a></li>
+<li><a href="/contact-us"><strong>Contact Us</strong></a></li>
+<li><a href="/terms"><strong>Terms and Conditions</strong></a></li>
+</ul>
+
+
+
+
+
+
+
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>The Cluster</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="the-cluster">The Cluster</h1>
+
+<p>The cluster is made up of 1 head node and 10 compute nodes. Of the compute
+nodes, 8 are AMD based systems while the other 2 are Intel based systems. Here
+is the following hardware stack for all of the nodes:</p>
+
+<table>
+<thead>
+<tr>
+<th>Node Type</th>
+<th>Node Name</th>
+<th>Processor</th>
+<th>RAM</th>
+<th>HDD (<code>/tmp</code>)</th>
+<th>Extra Components</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Head Node</td>
+<td><code>robotarium</code></td>
+<td>AMD Opteron 6320 (8 cores)</td>
+<td>64 GB</td>
+<td>916 GB</td>
+<td>&mdash;</td>
+</tr>
+
+<tr>
+<td>AMD Compute Node</td>
+<td><code>gpu01</code>, <code>gpu02</code>, <code>gpu03</code>, <code>gpu04</code>, <code>gpu05</code>, <code>gpu06</code></td>
+<td>4x AMD Opteron 6376 (64 cores)</td>
+<td>512 GB</td>
+<td>40 GB</td>
+<td>NVIDIA K20 GPU, (2x in gpu06)</td>
+</tr>
+
+<tr>
+<td>AMD Compute Node (Large RAM)</td>
+<td><code>gpu07</code>, <code>gpu08</code></td>
+<td>4x AMD Opteron 6376 (64 cores)</td>
+<td>1024 GB</td>
+<td>40 GB</td>
+<td>NVIDIA K20 GPU (<em>only in <code>gpu07</code></em>), 2x NVIDIA Titan Xp GPUs (<em>only in <code>gpu08</code></em>)</td>
+</tr>
+
+<tr>
+<td>Intel Compute Node</td>
+<td><code>mic01</code>, <code>mic02</code></td>
+<td>2x Intel Xeon E5-2650v2 (16 cores)</td>
+<td>128 GB</td>
+<td>40 GB</td>
+<td>&mdash;</td>
+</tr>
+
+<tr>
+<td>NVIDIA DGX1 Node</td>
+<td><code>dgx01</code></td>
+<td>2x Intel Xeon E5-2698v4 (40 cores)</td>
+<td>512 GB</td>
+<td>440 GB (7 TB at <code>/raid/scratch</code>)</td>
+<td>8x NVIDIA Tesla P100</td>
+</tr>
+</tbody>
+</table>
+
+<p>In addition to the above listed nodes, there are also some special-purpose nodes
+&mdash; specifically, the cluster has eight <a href="//en.wikipedia.org/wiki/Xeon_Phi">Intel MIC</a> nodes:</p>
+
+<table>
+<thead>
+<tr>
+<th>Node Type</th>
+<th>Node Name</th>
+<th>Processor</th>
+<th>Onboard Memory</th>
+<th>Extra Components</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Intel MIC Compute Units</td>
+<td><code>mic01-0</code>, <code>mic01-1</code>, <code>mic01-2</code>, <code>mic01-3</code>, <code>mic02-0</code>, <code>mic02-1</code>, <code>mic02-2</code>, <code>mic02-3</code></td>
+<td>Intel Xeon Phi 5120D</td>
+<td>8 GB</td>
+<td>&mdash;</td>
+</tr>
+</tbody>
+</table>
+
+<p>All of the nodes are connected by both a 1Gbps network and an InfiniBand 4x 10Gbps network. We support the full OFED stack.</p>
+
+<p>The nodes are made available through the SLURM resource management system &mdash; more information on queues can be found <a href="howto#queueing_system">here</a>.</p>
+
+<p>Details about the OS and available software packages can be found on the <a href="#">software information</a> page.</p>
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/ecr-cluster/ecr-cluster.github.io/commit/a242219e98c72eb1e9c4983b310c8e06c2d5b7bf" title='Last modified Aug 13, 2019 by Hans-Nikolai Viessmann' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" alt="Changed" /> Aug 13, 2019
+    </a>
+  </div>
+  
+  
+  <div>
+    <a href="https://github.com/ecr-cluster/ecr-cluster.github.io/edit/master/content/docs/the-cluster.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" alt="Edit" /> Edit this page
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+
+    
+  
+
+  <aside class="book-toc level-6 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#the-cluster">The Cluster</a></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+  
+</body>
+
+</html>

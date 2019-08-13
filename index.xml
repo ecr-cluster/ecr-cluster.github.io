@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About on ECR Cluster Documentation Site</title>
+    <link>https://ecr-cluster.github.io/</link>
+    <description>Recent content in About on ECR Cluster Documentation Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 13 Aug 2019 14:49:39 +0200</lastBuildDate>
+    
+	<atom:link href="https://ecr-cluster.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>FAQ</title>
+      <link>https://ecr-cluster.github.io/faq/</link>
+      <pubDate>Tue, 13 Aug 2019 15:53:18 +0200</pubDate>
+      
+      <guid>https://ecr-cluster.github.io/faq/</guid>
+      <description>Frequently Asked Questions Information about the Cluster  What are the available resources on the cluster? A table showing the hardware specifications for all nodes provided here. Who maintains the cluster? The cluster is administrated by Hans Viessmann (you can contact him via the contact form).  Getting Help  What help/support is available? No formal support is provided, other than basic adminstrative tasks and maintanence work. Users may contact the administrator for help, such as in the case of install/updating some hardware and/or software.</description>
+    </item>
+    
+    <item>
+      <title>Register</title>
+      <link>https://ecr-cluster.github.io/register/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ecr-cluster.github.io/register/</guid>
+      <description>Register To register, please read the Terms and Conditions and then fill out the form below and submit it. You should receive a response on the same day (within working hours) or latest next day.
+NOTE: not all requests to access the cluster will be accepted! Please consider the following questions, and use these as a guide to determine whether or not your reason to use the cluster is justified or appropriate:</description>
+    </item>
+    
+    <item>
+      <title>The Cluster</title>
+      <link>https://ecr-cluster.github.io/docs/the-cluster/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ecr-cluster.github.io/docs/the-cluster/</guid>
+      <description>The Cluster The cluster is made up of 1 head node and 10 compute nodes. Of the compute nodes, 8 are AMD based systems while the other 2 are Intel based systems. Here is the following hardware stack for all of the nodes:
+   Node Type Node Name Processor RAM HDD (/tmp) Extra Components     Head Node robotarium AMD Opteron 6320 (8 cores) 64 GB 916 GB &amp;mdash;   AMD Compute Node gpu01, gpu02, gpu03, gpu04, gpu05, gpu06 4x AMD Opteron 6376 (64 cores) 512 GB 40 GB NVIDIA K20 GPU, (2x in gpu06)   AMD Compute Node (Large RAM) gpu07, gpu08 4x AMD Opteron 6376 (64 cores) 1024 GB 40 GB NVIDIA K20 GPU (only in gpu07), 2x NVIDIA Titan Xp GPUs (only in gpu08)   Intel Compute Node mic01, mic02 2x Intel Xeon E5-2650v2 (16 cores) 128 GB 40 GB &amp;mdash;   NVIDIA DGX1 Node dgx01 2x Intel Xeon E5-2698v4 (40 cores) 512 GB 440 GB (7 TB at /raid/scratch) 8x NVIDIA Tesla P100    In addition to the above listed nodes, there are also some special-purpose nodes &amp;mdash; specifically, the cluster has eight Intel MIC nodes:</description>
+    </item>
+    
+    <item>
+      <title>How To</title>
+      <link>https://ecr-cluster.github.io/docs/how-to/</link>
+      <pubDate>Tue, 13 Aug 2019 16:35:22 +0200</pubDate>
+      
+      <guid>https://ecr-cluster.github.io/docs/how-to/</guid>
+      <description>How To Here we provide some guides for various aspects of using the Robotarium cluster. The most important ones are listed directly below &amp;mdash; it is a good idea to familiarise yourselves with these first. Please be aware that some of the guides here are hosted on other sites and will need you to navigate away from here.
+Note: this page is still being populated, if you feel that anything is missing or amiss please contact us and we&amp;rsquo;ll update this page appropriately.</description>
+    </item>
+    
+    <item>
+      <title>Quick Start</title>
+      <link>https://ecr-cluster.github.io/docs/quick-start/</link>
+      <pubDate>Tue, 13 Aug 2019 16:19:07 +0200</pubDate>
+      
+      <guid>https://ecr-cluster.github.io/docs/quick-start/</guid>
+      <description>Quick Start This guide provides a quick-n-dirty series of steps to get you started on the cluster. The guides assumes the following:
+ you have an account on the cluster you have experience with Linux-based systems (especially the command line) you have a SSH public-private key pair  Alright then, lift off!
+Accessing the Cluster (SSH) TBC</description>
+    </item>
+    
+    <item>
+      <title>Terms</title>
+      <link>https://ecr-cluster.github.io/terms/</link>
+      <pubDate>Tue, 13 Aug 2019 16:09:01 +0200</pubDate>
+      
+      <guid>https://ecr-cluster.github.io/terms/</guid>
+      <description>Terms and Conditions Mains Points  No guarantee of service or quality is given; the cluster is provided as a free service to members and affiliates of the Edinburgh Centre for Robotics with regular maintenance done by a small group of volunteers. Nonetheless some effort is made to ensure continuous uptime and availability. Very limited support is given; we only have a few volunteers at hand to help, and who themselves are busy doing their own work.</description>
+    </item>
+    
+    <item>
+      <title>Contact Us</title>
+      <link>https://ecr-cluster.github.io/contact-us/</link>
+      <pubDate>Tue, 13 Aug 2019 16:02:05 +0200</pubDate>
+      
+      <guid>https://ecr-cluster.github.io/contact-us/</guid>
+      <description>Contact Us If you can not find the answers you are looking for on this site or Google, please fill out the form below and we&amp;rsquo;ll try to answer your query as soon as possible.
+Slack Chat The easiest way to get help from existing users and admin-staff is to use Slack. You will need to be invited to join the chat, so please fill out the form below and we&amp;rsquo;ll invite you 😄.</description>
+    </item>
+    
+  </channel>
+</rss>
