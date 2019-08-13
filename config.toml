@@ -1,0 +1,14 @@
+baseURL = "https://ecr-cluster.github.io/"
+languageCode = "en-us"
+title = "ECR Cluster Documentation Site"
+enableEmoji = true
+theme = "book"
+
+# theme "book" configuration
+enableGitInfo = true
+[params]
+BookMenuBundle = '/menu'
+BookRepo = 'https://github.com/ecr-cluster/ecr-cluster.github.io'
+BookEditPath = 'edit/master/content'
+BookDateFormat = 'Jan 2, 2006'
+BookSearch = true
