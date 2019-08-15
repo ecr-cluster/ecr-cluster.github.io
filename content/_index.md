@@ -1,6 +1,5 @@
 ---
 title: "About"
-date: 2019-08-13T14:49:39+02:00
 type: docs
 ---
 
@@ -15,15 +14,18 @@ and the [Edinburgh Centre for Robotics](//www.edinburgh-robotics.org).
 
 The site provides the following information and facilities:
 
- * How to [register](register) to gain access to the cluster
+ * How to [register](/register) to gain access to the cluster
  * How to use the cluster
- * [FAQ](faq) & support contact details
- * The [terms and conditions](terms)
+ * [FAQ](/faq) & support [contact details](/contact-us)
+ * The [terms and conditions](/terms)
 
-_Note: this site is still incomplete, more information will be added when it is needed. The most helpful thing to do is to send us questions, and we will post the response to those questions here._
+_Note: this site is still incomplete, more information will be added when it is
+needed. The most helpful thing to do is to send us questions, and we will post
+the response to those questions here._
 
 Referencing
 -----------
 
-The cluster can be referenced within your publication or output directly via a DOI number, please see the [here](terms#referencing) for BibTeX referencing details.
-
+The cluster can be referenced within your publication or output directly via a
+DOI number, please see the [here](/terms#referencing) for BibTeX referencing
+details.
