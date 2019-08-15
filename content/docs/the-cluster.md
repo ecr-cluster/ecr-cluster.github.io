@@ -29,6 +29,6 @@ Intel MIC Compute Units | `mic01-0`, `mic01-1`, `mic01-2`, `mic01-3`, `mic02-0`,
 
 All of the nodes are connected by both a 1Gbps network and an InfiniBand 4x 10Gbps network. We support the full OFED stack.
 
-The nodes are made available through the SLURM resource management system --- more information on queues can be found [here](howto#queueing_system).
+The nodes are made available through the SLURM resource management system --- more information on queues can be found [here](/docs/how-to#queueing-system).
 
 Details about the OS and available software packages can be found on the [software information](#) page.
