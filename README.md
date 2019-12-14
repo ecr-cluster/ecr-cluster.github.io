@@ -1,6 +1,8 @@
 ECR Documentation Website
 =========================
 
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/ecr-cluster/ecr-cluster.github.io/issues)
+
 This repo contains a [Hugo](//gohugo.io) based website, whose content
 constitutes the documentation of the ECR Robotarium Cluster.
 
