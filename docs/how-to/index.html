@@ -4,18 +4,21 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="How To"><meta property="og:title" content="How To" />
+<meta property="og:description" content="How To Here we provide some guides for various aspects of using the Robotarium cluster. The most important ones are listed directly below &mdash; it is a good idea to familiarise yourselves with these first. Please be aware that some of the guides here are hosted on other sites and will need you to navigate away from here.
+Note: this page is still being populated, if you feel that anything is missing or amiss please contact us and we&#39;ll update this page appropriately." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ecr-cluster.github.io/docs/how-to/" />
+<meta property="article:published_time" content="2019-08-13T16:35:22+02:00" />
+<meta property="article:modified_time" content="2019-08-13T17:19:23+02:00" />
 <title>How To | ECR Cluster Documentation Site</title>
-
-
-<link rel="stylesheet" href="/book.min.3552dd6ca8e91656874edd40174b776c291e6d2cad6c20d95dbe265f565d2eef.css">
-
-
-<script defer src="/search.min.abe185f813490ff93524a4421164846cdc99189677ee1a1778f120b037729c22.js"></script>
-
-
-
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
+
+<link rel="stylesheet" href="/book.min.ffcc479e5aed144aa83aae87934a807d45199ce59d7618be86aff4b9d776afa7.css" integrity="sha256-/8xHnlrtFEqoOq6Hk0qAfUUZnOWddhi&#43;hq/0udd2r6c=">
+
+
+<script defer src="/en.search.min.2da78fa5858c0dbdc43b9dc9429d35284e560f8adf7a80503ae8633b9e09fc72.js" integrity="sha256-LaePpYWMDb3EO53JQp01KE5WD4rfeoBQOuhjO54J/HI="></script>
 
 <!--
 Made with Book Theme
@@ -26,7 +29,7 @@ https://github.com/alex-shpak/hugo-book
 </head>
 
 <body>
-  <input type="checkbox" style="display: none" id="menu-control" />
+  <input type="checkbox" class="hidden" id="menu-control" />
   <main class="flex container">
 
     <aside class="book-menu fixed">
@@ -38,7 +41,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -47,33 +50,20 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
-
-  <style>
-  nav ul a[href$="\2f docs\2fhow-to\2f "] {
-      color: #004ed0;
-  }
-  </style>
-
-<ul>
+    <ul>
 <li><a href="/"><strong>About</strong></a></li>
 <li><a href="/register"><strong>Register</strong></a></li>
 <li><strong>Documentation</strong>
-
 <ul>
 <li><a href="/docs/the-cluster/">The Cluster</a></li>
 <li><a href="/docs/quick-start/">Quick Start</a></li>
-<li><a href="/docs/how-to/">How To</a></li>
-</ul></li>
+<li><a href="/docs/how-to/"class=active>How To</a></li>
+</ul>
+</li>
 <li><a href="/faq"><strong>FAQ</strong></a></li>
 <li><a href="/contact-us"><strong>Contact Us</strong></a></li>
 <li><a href="/terms"><strong>Terms and Conditions</strong></a></li>
 </ul>
-
-
 
 
 
@@ -97,53 +87,41 @@ https://github.com/alex-shpak/hugo-book
     <div class="book-page">
       <header class="flex align-center justify-between book-header">
   <label for="menu-control">
-    <img src="/svg/menu.svg" alt="Menu" />
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
   <strong>How To</strong>
 </header>
 
       
-<article class="markdown">
-
-<h1 id="how-to">How To</h1>
-
+<article class="markdown"><h1 id="how-to">How To</h1>
 <p>Here we provide some guides for various aspects of using the Robotarium cluster.
 The most important ones are listed directly below &mdash; it is a good idea to
 familiarise yourselves with these first. Please be aware that some of the guides
 here are hosted on other sites and will need you to navigate away from here.</p>
-
 <p><em>Note: this page is still being populated, if you feel that anything is missing
-or amiss please contact us and we&rsquo;ll update this page appropriately.</em></p>
-
+or amiss please contact us and we'll update this page appropriately.</em></p>
 <h2 id="basics">Basics</h2>
-
 <h3 id="accessing-the-cluster">Accessing the Cluster</h3>
-
 <p><strong>The precise details of how to access the cluster are omitted from this site,
 please contact us for more information.</strong></p>
-
 <p>The cluster can only be accessed from within the Heriot-Watt University network.
 Users wishing to use it from outside the university will need to setup an SSH
 tunnel (see <a href="#ssh-forwarding">SSH Forwarding</a>) or use the HW-VPN (please contact us to give you
 access. HW staff have VPN access per default (see the HW-VPN details).</p>
-
 <blockquote>
 <p><strong>Notice</strong>
 There is a <a href="//robotarium.hw.ac.uk/userportal">user portal website</a> available
-for users to check the current load of the cluster, you&rsquo;ll need to login using
+for users to check the current load of the cluster, you'll need to login using
 your cluster account to access this. For the moment, the site is using a
 self-signed SSL certificate, as such you will likely need to set your browser
 to accept the certificate before you can access the site.</p>
 </blockquote>
-
 <h4 id="ssh-forwarding">SSH Forwarding</h4>
-
 <blockquote>
 <p><strong>Notice</strong>
 This is only available for users with MACS (School of Mathematics and Computer
 Science) accounts. Otherwise you can try out the HW-VPN.</p>
 </blockquote>
-
 <p>As a quick introduction, a SSH tunnel is a secure method to transport other
 network protocols across network boundaries &mdash; assuming of course that you can
 access the network over SSH in the first place. This is achieved by establishing
@@ -151,7 +129,6 @@ a SSH connection between the client (yourself) and the remote server, and then
 encapsulating (tunnelling) other network protocols &mdash; such as HTTP(S), FTP, and
 SSH &mdash; into it. In this instance, we will use a tunnel to forward an SSH
 connection from inside the university network to your system.</p>
-
 <p>The basic idea is that you can forward SSH connections, meaning that one tunnels
 a series of SSH connections over one or more relay hosts to connect to some
 server. Historically, there are several way of doing this (if your interested
@@ -160,18 +137,13 @@ you can read about it
 the easiest way to achieve this is by using the SSH <code>ProxyCommand</code> option and
 the <code>-W</code> flag. Together these provide a way to chain SSH connections together.
 An example of this on the command line would be:</p>
-
 <pre><code>$ ssh -o ProxyCommand='ssh -W %h:%p &lt;USER&gt;@&lt;IP of remote server&gt;' &lt;USER&gt;@&lt;IP of relay server&gt;
-</code></pre>
-
-<p>Within the <code>ProxyCommand</code> we specify the remote server and through the <code>-W</code> flag we
+</code></pre><p>Within the <code>ProxyCommand</code> we specify the remote server and through the <code>-W</code> flag we
 state that we want the connection to be forwarded to the relay server &mdash; this is
 given as the last argument of the SSH command.</p>
-
 <p>We can simplify this by removing the need to write all that out by placing it
- the <code>~/.ssh/config</code> file. The structure of this would then be:</p>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sshd" data-lang="sshd">Host SERVER1
+the <code>~/.ssh/config</code> file. The structure of this would then be:</p>
+<pre><code class="language-sshd" data-lang="sshd">Host SERVER1
   HostName 192.168.0.1
   User someone
   IdentityFile ~/.ssh/id_rsa
@@ -179,51 +151,38 @@ Host SERVER2
   HostName 192.168.1.1
   User someoneelse
   ProxyCommand ssh SERVER1 -W %h:%p
- </code></pre></div>
-
+ </code></pre>
 <p>Then by calling <code>ssh SERVER2</code> you automatically get the connection forwarded
 over <code>SERVER1</code>.</p>
-
 <h3 id="setting-up-your-account">Setting up Your Account</h3>
-
 <h3 id="the-module-system">The Module System</h3>
-
 <p>The cluster provides many different software packages (see Software for details)
 through the Modules system. The basic commands to access and manage these
 software packages is:</p>
-
 <ul>
 <li><code>module list</code> &mdash; list loaded modules</li>
 <li><code>module avail</code> &mdash; list all available modules</li>
 <li><code>module load &lt;module name&gt;</code> &mdash; load a specific module</li>
 <li><code>module unload &lt;module name&gt;</code> &mdash; unload a specific module</li>
 </ul>
-
 <p>Further commands can be found in the man-page &mdash; <code>man module</code>.</p>
-
-<p>When you first login, you&rsquo;ll find that the default-environment module has been
+<p>When you first login, you'll find that the default-environment module has been
 loaded &mdash; this gives you access the SLURM batch-management system. To make
 changes to what modules are loaded automatically for you, use module initadd and
 module initrm to add entries for you. It is advised not include module purge
 within your <code>.bashrc</code> file unless you know what you are doing.</p>
-
 <p>More details on how to use the modules system can be read up in the
 <a href="#modules">Modules</a> section.</p>
-
 <h2 id="queueing-system">Queueing System</h2>
-
 <p>The cluster uses <a href="//slurm.schedmd.com/">SLURM</a>, or the <em>Simple Linux Utility for Resource Management</em> to
 manage user workloads. It is the only means by which to run applications on the
 cluster. A good resource to understand how to use it is through the <a href="//slurm.schedmd.com/quickstart.html">quickstart
 guide</a>.</p>
-
 <h3 id="the-queues">The Queues</h3>
-
 <p>In the table below is given the queues (or as they are referred to in SLURM &mdash;
 the <em>partitions</em>). The queues are ordered in their priority, with <code>amd-shortq</code>
 having the highest priority. What this means is that jobs assigned to that queue
 will likely be allocated before jobs in other queues.</p>
-
 <table>
 <thead>
 <tr>
@@ -233,7 +192,6 @@ will likely be allocated before jobs in other queues.</p>
 <th>Notes</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td><code>amd-shortq</code></td>
@@ -241,28 +199,24 @@ will likely be allocated before jobs in other queues.</p>
 <td>gpu01</td>
 <td>default queue – please take note of this!</td>
 </tr>
-
 <tr>
 <td><code>amd-longq</code></td>
 <td>7 days</td>
 <td>gpu02-gpu08</td>
 <td></td>
 </tr>
-
 <tr>
 <td><code>intel-shortq</code></td>
 <td>1 hour</td>
 <td>mic01</td>
 <td></td>
 </tr>
-
 <tr>
 <td><code>intel-longq</code></td>
 <td>7 days</td>
 <td>mic02, dgx01</td>
 <td></td>
 </tr>
-
 <tr>
 <td><code>specialq</code></td>
 <td>30 days</td>
@@ -271,36 +225,29 @@ will likely be allocated before jobs in other queues.</p>
 </tr>
 </tbody>
 </table>
-
 <p>If users need access to the specialq or have other needs, please contact us.</p>
-
 <p>Mored details about our queues (partitions) can be found using <code>sinfo</code>. For example:</p>
-
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># to get detailed information about the queues (include generic resources)</span>
 $ sinfo -o <span style="color:#e6db74">&#34;%15N %10c %10m  %25f %24G&#34;</span> --partition<span style="color:#f92672">=</span>amd-shortq
 NODELIST        CPUS       MEMORY      AVAIL_FEATURES            GRES
-gpu07           <span style="color:#ae81ff">64</span>         <span style="color:#ae81ff">1018366</span>     gpu-host                  gpu1,gpu1
-gpu08           <span style="color:#ae81ff">64</span>         <span style="color:#ae81ff">1018854</span>     gpu-host                  gpu1
+gpu07           <span style="color:#ae81ff">64</span>         <span style="color:#ae81ff">1018366</span>     gpu-host                  gpu:k20:1,gpu:k6000:1
+gpu08           <span style="color:#ae81ff">64</span>         <span style="color:#ae81ff">1018854</span>     gpu-host                  gpu:xp:1
 
 $ sinfo -o <span style="color:#e6db74">&#34;%15N %10c %10m  %25f %24G&#34;</span> --partition<span style="color:#f92672">=</span>amd-longq
 NODELIST        CPUS       MEMORY      AVAIL_FEATURES            GRES
-gpu<span style="color:#f92672">[</span><span style="color:#ae81ff">01</span>-05<span style="color:#f92672">]</span>      <span style="color:#ae81ff">64</span>         <span style="color:#ae81ff">515989</span>      gpu-host                  gpu1
-gpu06           <span style="color:#ae81ff">64</span>         <span style="color:#ae81ff">515989</span>      gpu-host                  gpu2
+gpu<span style="color:#f92672">[</span>01-05<span style="color:#f92672">]</span>      <span style="color:#ae81ff">64</span>         <span style="color:#ae81ff">515989</span>      gpu-host                  gpu:k20:1
+gpu06           <span style="color:#ae81ff">64</span>         <span style="color:#ae81ff">515989</span>      gpu-host                  gpu:k20:2
 
 $ sinfo -o <span style="color:#e6db74">&#34;%15N %10c %10m  %25f %24G&#34;</span> --partition<span style="color:#f92672">=</span>intel-longq
 NODELIST        CPUS       MEMORY      AVAIL_FEATURES            GRES
-dgx01           <span style="color:#ae81ff">80</span>         <span style="color:#ae81ff">515896</span>      gpu-host                  gpu8
+dgx01           <span style="color:#ae81ff">80</span>         <span style="color:#ae81ff">515896</span>      gpu-host                  gpu:p100:8
 mic02           <span style="color:#ae81ff">32</span>         <span style="color:#ae81ff">128906</span>      <span style="color:#f92672">(</span>null<span style="color:#f92672">)</span>                    <span style="color:#f92672">(</span>null<span style="color:#f92672">)</span></code></pre></div>
-
 <p>Which jobs are currently running and which jobs are currently queued for
 execution can be inspected using the <code>squeue</code> command.</p>
-
 <h3 id="running-programs">Running Programs</h3>
-
 <p>The three most important SLURM commands for running code are <code>srun</code>, <code>sbatch</code> and
 <code>scancel</code>. They allow you to insert programs into the queues and to take them off
-queues again. They also allow you to specify your program&rsquo;s exact needs.</p>
-
+queues again. They also allow you to specify your program's exact needs.</p>
 <blockquote>
 <p><strong>Notice</strong>
 This is a heterogeneous cluster! Not all codes can be run on all nodes! The
@@ -312,18 +259,14 @@ of GPU or a MIC to be available. If so, you need to make sure that you specify
 your needs as precisely as possible; otherwise, your code will fail to run or
 suffer poor performance!</p>
 </blockquote>
-
 <p>The four most important needs you can specify are:</p>
-
 <ul>
 <li>the number of nodes you want <code>--nodes=&lt;n&gt;</code></li>
 <li>which nodes you do or do not want <code>--nodelist=&lt;name,name,...&gt;</code> / <code>--exclude=&lt;name,name,...&gt;</code></li>
 <li>how many cpus you want <code>-c&lt;n&gt;</code></li>
 <li>which resources (gpus) you want <code>--gres=&lt;gres,gres,...&gt;</code></li>
 </ul>
-
 <p>Example usage:</p>
-
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># to run a command and have its output printed in the shell we use the `srun&#39; command</span>
 $ srun &lt;...command...&gt; &lt;...args...&gt;
 
@@ -348,7 +291,7 @@ $ srun --partition<span style="color:#f92672">=</span>amd-longq --gres<span styl
 <span style="color:#75715e"># please do only specify `--gres=gpu&#39; if your code *actually does use* a gpu!</span>
 
 <span style="color:#75715e">#If you want to use a system that requires two &#39;K20` gpus for less than 1 hour:</span>
-$ srun --gres<span style="color:#f92672">==</span>gpu2 &lt;...command...&gt; &lt;...args...&gt;
+$ srun --gres<span style="color:#f92672">=</span><span style="color:#f92672">=</span>gpu:k20:2 &lt;...command...&gt; &lt;...args...&gt;
 
 <span style="color:#75715e"># to run in &#39;batch&#39; mode, we use the `sbatch&#39; command</span>
 <span style="color:#75715e"># these examples are the same as those above</span>
@@ -358,23 +301,20 @@ sbatch --partition<span style="color:#f92672">=</span>amd-longq --nodes<span sty
 sbatch --partition<span style="color:#f92672">=</span>amd-longq --nodes<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span> -c64 --output<span style="color:#f92672">=</span>outfile &lt;...command...&gt; &lt;...args...&gt;
 sbatch --partition<span style="color:#f92672">=</span>amd-longq --nodelist<span style="color:#f92672">=</span>gpu06,gpu07 --output<span style="color:#f92672">=</span>outfile &lt;...command...&gt; &lt;...args...&gt;
 sbatch --partition<span style="color:#f92672">=</span>amd-longq --gres<span style="color:#f92672">=</span>gpu --output<span style="color:#f92672">=</span>outfile &lt;...command...&gt; &lt;...args...&gt;
-sbatch --gres<span style="color:#f92672">=</span>gpu2 --output<span style="color:#f92672">=</span>outfile &lt;...command...&gt; &lt;...args...&gt;
+sbatch --gres<span style="color:#f92672">=</span>gpu:k20:2 --output<span style="color:#f92672">=</span>outfile &lt;...command...&gt; &lt;...args...&gt;
 
 <span style="color:#75715e"># to view the current cluster usage we can look at the queues using `squeue&#39;</span>
 $ squeue
 
 <span style="color:#75715e"># to cancel a batch job we can use the `scancel&#39; command</span>
 $ scancel &lt;...job ID...&gt;</code></pre></div>
-
 <h2 id="modules">Modules</h2>
-
 <p>Most of the software packages available are managed through a system of modules
 which contain both the software files and configuration information. These
 modules can be dynamically loaded and unloaded allowing for a great deal of
 flexibility &mdash; this is especially useful for making use of different versions or
 builds of the same software. More information can be found on the <a href="//modules.sourceforge.net/">project
 website</a>.</p>
-
 <p>Example usage:
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ module avail
 acml/gcc/64/5.3.1
@@ -386,74 +326,72 @@ $ module load cuda65/toolkit
 
 $ module unload cuda65/toolkit
 <span style="color:#75715e"># this unloads the module</span></code></pre></div></p>
-
 <h3 id="personal-modules">Personal Modules</h3>
-
-<p>It is possible to create one&rsquo;s own modules. The benefit of doing this is that
+<p>It is possible to create one's own modules. The benefit of doing this is that
 the module system will handle your environment variables for you, as well as
 other configuration. Additionally, if for instance you have a dependency on a
 module for a piece of software to work, this can be encoded into the module
 file.</p>
-
 <p>The first step is to create a <code>.modulerc</code> file your home directory, e.g.
 <code>~/.modulerc</code>. File should contain the following:</p>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tcl" data-lang="tcl"><span style="color:#75715e">#%Module -*- tcl -*-
-</span><span style="color:#75715e">## get extra modules files...
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tcl" data-lang="tcl"><span style="color:#75715e">#</span><span style="color:#75715e">%Module -*- tcl -*-
+</span><span style="color:#75715e"></span><span style="color:#75715e">#</span><span style="color:#75715e"># get extra modules files...
 </span><span style="color:#75715e">
-</span><span style="color:#75715e"></span>module use <span style="color:#f92672">/</span>home<span style="color:#f92672">/&lt;</span>USERNAME<span style="color:#f92672">&gt;/</span>.modules</code></pre></div>
-
+</span><span style="color:#75715e"></span>module use <span style="color:#f92672">/</span>home<span style="color:#f92672">/</span><span style="color:#f92672">&lt;</span>USERNAME<span style="color:#f92672">&gt;</span><span style="color:#f92672">/</span>.modules</code></pre></div>
 <p>Replace <code>&lt;USERNAME&gt;</code> with your username. The module use directive points to a
 directory where all of your modules are to be found. The next step is to create
 a module. Assuming that you have created the <code>~/.modules</code> directory, you can add
 a module file to the directory. The typical convention is to create a directory
 naming the software (e.g.<code>~/.modules/mysoftware</code>) and give the module file the
 version of the software as its name, e.g. <code>~/.modules/mysoftware/1.0.0</code>.</p>
-
 <p>An example of the content of a module file goes as follows:</p>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tcl" data-lang="tcl"><span style="color:#75715e">#%Module -*- tcl -*-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tcl" data-lang="tcl"><span style="color:#75715e">#</span><span style="color:#75715e">%Module -*- tcl -*-
 </span><span style="color:#75715e">
-</span><span style="color:#75715e"># Helpful messages
+</span><span style="color:#75715e"></span><span style="color:#75715e">#</span><span style="color:#75715e"> Helpful messages
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">proc</span> ModulesHelp <span style="color:#66d9ef">{</span> <span style="color:#66d9ef">}</span> <span style="color:#66d9ef">{</span>
-        puts stderr <span style="color:#e6db74">&#34;This module sets up access to something&#34;</span>
+        puts stderr <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">T</span><span style="color:#e6db74">h</span><span style="color:#e6db74">i</span><span style="color:#e6db74">s</span><span style="color:#e6db74"> </span><span style="color:#e6db74">m</span><span style="color:#e6db74">o</span><span style="color:#e6db74">d</span><span style="color:#e6db74">u</span><span style="color:#e6db74">l</span><span style="color:#e6db74">e</span><span style="color:#e6db74"> </span><span style="color:#e6db74">s</span><span style="color:#e6db74">e</span><span style="color:#e6db74">t</span><span style="color:#e6db74">s</span><span style="color:#e6db74"> </span><span style="color:#e6db74">u</span><span style="color:#e6db74">p</span><span style="color:#e6db74"> </span><span style="color:#e6db74">a</span><span style="color:#e6db74">c</span><span style="color:#e6db74">c</span><span style="color:#e6db74">e</span><span style="color:#e6db74">s</span><span style="color:#e6db74">s</span><span style="color:#e6db74"> </span><span style="color:#e6db74">t</span><span style="color:#e6db74">o</span><span style="color:#e6db74"> </span><span style="color:#e6db74">s</span><span style="color:#e6db74">o</span><span style="color:#e6db74">m</span><span style="color:#e6db74">e</span><span style="color:#e6db74">t</span><span style="color:#e6db74">h</span><span style="color:#e6db74">i</span><span style="color:#e6db74">n</span><span style="color:#e6db74">g</span><span style="color:#e6db74">&#34;</span>
 <span style="color:#66d9ef">}</span>
-module-whatis <span style="color:#e6db74">&#34;sets up access to something&#34;</span>
+module-whatis <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">s</span><span style="color:#e6db74">e</span><span style="color:#e6db74">t</span><span style="color:#e6db74">s</span><span style="color:#e6db74"> </span><span style="color:#e6db74">u</span><span style="color:#e6db74">p</span><span style="color:#e6db74"> </span><span style="color:#e6db74">a</span><span style="color:#e6db74">c</span><span style="color:#e6db74">c</span><span style="color:#e6db74">e</span><span style="color:#e6db74">s</span><span style="color:#e6db74">s</span><span style="color:#e6db74"> </span><span style="color:#e6db74">t</span><span style="color:#e6db74">o</span><span style="color:#e6db74"> </span><span style="color:#e6db74">s</span><span style="color:#e6db74">o</span><span style="color:#e6db74">m</span><span style="color:#e6db74">e</span><span style="color:#e6db74">t</span><span style="color:#e6db74">h</span><span style="color:#e6db74">i</span><span style="color:#e6db74">n</span><span style="color:#e6db74">g</span><span style="color:#e6db74">&#34;</span>
 
 prereq somethingelse <span style="color:#960050;background-color:#1e0010">#</span> ensure that this module is loaded before hand
 conflict thatothermodule <span style="color:#960050;background-color:#1e0010">#</span> ensure that this module is NOT loaded
 
 module load gcc <span style="color:#960050;background-color:#1e0010">#</span> you can have the module load dependencies for you
 
-<span style="color:#66d9ef">set</span>          root             <span style="color:#f92672">/</span>home<span style="color:#f92672">/&lt;</span>USERNAME<span style="color:#f92672">&gt;/</span>install<span style="color:#f92672">/</span>location <span style="color:#960050;background-color:#1e0010">#</span> a TCL variable
+<span style="color:#66d9ef">set</span>          root             <span style="color:#f92672">/</span>home<span style="color:#f92672">/</span><span style="color:#f92672">&lt;</span>USERNAME<span style="color:#f92672">&gt;</span><span style="color:#f92672">/</span>install<span style="color:#f92672">/</span>location <span style="color:#960050;background-color:#1e0010">#</span> a TCL variable
 setenv       SOMEVERION       <span style="color:#ae81ff">0.95</span>       <span style="color:#960050;background-color:#1e0010">#</span> set an environment variable
 append<span style="color:#f92672">-</span>path  PATH             $root<span style="color:#f92672">/</span>bin  <span style="color:#960050;background-color:#1e0010">#</span> append to $PATH
 append<span style="color:#f92672">-</span>path  MANPATH          $root<span style="color:#f92672">/</span>man  <span style="color:#960050;background-color:#1e0010">#</span> append to $MANPATH
 append<span style="color:#f92672">-</span>path  LD_LIBRARY_PATH  $root<span style="color:#f92672">/</span>lib  <span style="color:#960050;background-color:#1e0010">#</span> append to $LD_LIBRARY_PATH</code></pre></div>
-
 <p>For more information on what to put in a module file, have a look at the man
 pages, e.g. <code>man modulefile</code>.</p>
 </article>
 
-      
-<div class="book-footer justify-between">
+      <div class="book-footer justify-between">
+  
+
+  
   
   <div>
     
-    <a href="https://github.com/ecr-cluster/ecr-cluster.github.io/commit/a242219e98c72eb1e9c4983b310c8e06c2d5b7bf" title='Last modified Aug 13, 2019 by Hans-Nikolai Viessmann' target="_blank" rel="noopener">
-      <img src="/svg/calendar.svg" alt="Changed" /> Aug 13, 2019
+    <a class="flex align-center" href="https://github.com/ecr-cluster/ecr-cluster.github.io/commit/a242219e98c72eb1e9c4983b310c8e06c2d5b7bf" title='Last modified by Hans-Nikolai Viessmann | Aug 13, 2019' target="_blank">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Aug 13, 2019</span>
     </a>
   </div>
   
+  
+
   
   <div>
-    <a href="https://github.com/ecr-cluster/ecr-cluster.github.io/edit/dev/content/docs/how-to.md" target="_blank" rel="noopener">
-      <img src="/svg/edit.svg" alt="Edit" /> Edit this page
+    <a class="flex align-center" href="https://github.com/ecr-cluster/ecr-cluster.github.io/edit/dev/content/docs/how-to.md" target="_blank">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
     </a>
   </div>
   
-</div>
 
+</div>
 
       
     </div>
@@ -461,39 +399,35 @@ pages, e.g. <code>man modulefile</code>.</p>
     
   
 
-  <aside class="book-toc level-6 fixed">
+  <aside class="book-toc levels-6 fixed">
     <nav id="TableOfContents">
-<ul>
-<li><a href="#how-to">How To</a>
-<ul>
-<li><a href="#basics">Basics</a>
-<ul>
-<li><a href="#accessing-the-cluster">Accessing the Cluster</a>
-<ul>
-<li><a href="#ssh-forwarding">SSH Forwarding</a></li>
-</ul></li>
-<li><a href="#setting-up-your-account">Setting up Your Account</a></li>
-<li><a href="#the-module-system">The Module System</a></li>
-</ul></li>
-<li><a href="#queueing-system">Queueing System</a>
-<ul>
-<li><a href="#the-queues">The Queues</a></li>
-<li><a href="#running-programs">Running Programs</a></li>
-</ul></li>
-<li><a href="#modules">Modules</a>
-<ul>
-<li><a href="#personal-modules">Personal Modules</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#basics">Basics</a>
+      <ul>
+        <li><a href="#accessing-the-cluster">Accessing the Cluster</a></li>
+        <li><a href="#setting-up-your-account">Setting up Your Account</a></li>
+        <li><a href="#the-module-system">The Module System</a></li>
+      </ul>
+    </li>
+    <li><a href="#queueing-system">Queueing System</a>
+      <ul>
+        <li><a href="#the-queues">The Queues</a></li>
+        <li><a href="#running-programs">Running Programs</a></li>
+      </ul>
+    </li>
+    <li><a href="#modules">Modules</a>
+      <ul>
+        <li><a href="#personal-modules">Personal Modules</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
   </aside>
 
 
 
   </main>
-  
-  
+
   
 </body>
 

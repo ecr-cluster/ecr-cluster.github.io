@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docs on ECR Cluster Documentation Site</title>
@@ -28,7 +28,7 @@
       
       <guid>https://ecr-cluster.github.io/docs/how-to/</guid>
       <description>How To Here we provide some guides for various aspects of using the Robotarium cluster. The most important ones are listed directly below &amp;mdash; it is a good idea to familiarise yourselves with these first. Please be aware that some of the guides here are hosted on other sites and will need you to navigate away from here.
-Note: this page is still being populated, if you feel that anything is missing or amiss please contact us and we&amp;rsquo;ll update this page appropriately.</description>
+Note: this page is still being populated, if you feel that anything is missing or amiss please contact us and we&#39;ll update this page appropriately.</description>
     </item>
     
     <item>
