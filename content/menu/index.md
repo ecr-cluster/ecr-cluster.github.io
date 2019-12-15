@@ -1,8 +1,10 @@
 ---
 headless: true
+bookMenuLevels: 1
 ---
 
 - [**About**]({{< relref "/" >}})
+  - [Publications]({{< relref "/publications.md" >}})
 - [**Register**](/register)
 - **Documentation**
   - [The Cluster]({{< relref "/docs/the-cluster.md" >}})
@@ -11,3 +13,4 @@ headless: true
 - [**FAQ**](/faq)
 - [**Contact Us**](/contact-us)
 - [**Terms and Conditions**](/terms)
+- [**Sitemap**](/sitemap)

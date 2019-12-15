@@ -1,0 +1,14 @@
+{{ define "main" }}
+<article class="markdown">
+  {{- .Content -}}
+  <ul>
+  {{- range .Site.Pages.ByTitle }}{{ if or (eq (isset .Params "noindex") false) (ne .Params.noIndex true) }}
+  <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+  {{ end }}{{- end }}
+  </ul>
+</article>
+{{ end }}
+
+{{ define "toc" }}
+  {{ partial "docs/toc" . }}
+{{ end }}
