@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Compilers"><meta property="og:title" content="Compilers" />
+<meta property="og:description" content="Compilers On the cluster we offer several C/C&#43;&#43;/Fortran compilers through our modules system.
+Below is given a short introduction to these and a few tips on how best to utilise them.
+GNU Compiler Collection Intel Compiler Suite Portland Group Compiler Suite The best resource on using any of the PGI compilers is by reading their user guide, which can be found at http://www.pgroup.com/resources/docs.htm.
+Advice and Tips Compiler Flags The PGI developers recommend that a few key flags be active for all compilations, specifically -fast -Mipa=fast,inline." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ecr-cluster.github.io/docs/compilers/" />
+<meta property="article:modified_time" content="2019-12-15T16:05:55+01:00" />
+<title>Compilers | ECR Cluster Documentation Site</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/book.min.ffcc479e5aed144aa83aae87934a807d45199ce59d7618be86aff4b9d776afa7.css" integrity="sha256-/8xHnlrtFEqoOq6Hk0qAfUUZnOWddhi&#43;hq/0udd2r6c=">
+
+
+<script defer src="/en.search.min.ba67c196c38f9f2256dad5a092623bf77347a39f72a492f954abdee8ca5e01f2.js" integrity="sha256-umfBlsOPnyJW2tWgkmI793NHo59ypJL5VKve6MpeAfI="></script>
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<img src="https://ecr-cluster.github.io//img/logo.png" alt="ECR Logo" class="custom-img-logo" />
+<h2 class="book-brand">
+  <a href="https://ecr-cluster.github.io/">ECR Cluster Documentation Site</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    <ul>
+<li><a href="/"><strong>About</strong></a>
+<ul>
+<li><a href="/publications/">Publications</a></li>
+</ul>
+</li>
+<li><a href="/register"><strong>Register</strong></a></li>
+<li><strong>Documentation</strong>
+<ul>
+<li><a href="/docs/the-cluster/">The Cluster</a></li>
+<li><a href="/docs/quick-start/">Quick Start</a></li>
+<li><a href="/docs/how-to/">How To</a></li>
+</ul>
+</li>
+<li><a href="/faq"><strong>FAQ</strong></a></li>
+<li><a href="/contact-us"><strong>Contact Us</strong></a></li>
+<li><a href="/terms"><strong>Terms and Conditions</strong></a></li>
+<li><a href="/sitemap"><strong>Sitemap</strong></a></li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+  <strong>Compilers</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="compilers">Compilers</h1>
+<p>On the cluster we offer several C/C++/Fortran compilers through our modules
+system.</p>
+<p>Below is given a short introduction to these and a few tips on how best to
+utilise them.</p>
+<h2 id="gnu-compiler-collection">GNU Compiler Collection</h2>
+<h2 id="intel-compiler-suite">Intel Compiler Suite</h2>
+<h2 id="portland-group-compiler-suite">Portland Group Compiler Suite</h2>
+<p>The best resource on using any of the PGI compilers is by reading their user
+guide, which can be found at <a href="http://www.pgroup.com/resources/docs.htm">http://www.pgroup.com/resources/docs.htm</a>.</p>
+<h3 id="advice-and-tips">Advice and Tips</h3>
+<h4 id="compiler-flags">Compiler Flags</h4>
+<p>The PGI developers recommend that a few key flags be active for all
+compilations, specifically <code>-fast -Mipa=fast,inline</code>. The reasons for this and
+other details can be found on
+<a href="https://www.pgroup.com/support/compile.htm">https://www.pgroup.com/support/compile.htm</a>.</p>
+<h4 id="user-configurations">User Configurations</h4>
+<p>The PGI compiler suite has a default set of configurations that it uses when
+first loaded. These can be altered, or new configurations added. The main
+benefit of this is that certain compilation stages can be influenced in ways
+which are not covered by command line arguments.</p>
+<p>These configurations can be set by creating and inserting the configuration
+settings into the appropriate RC file within your home directory. The name of
+such a file must be of the format <code>.&lt;compilerbin&gt;rc</code>, e.g. for <code>pgcc</code> the RC
+file is <code>.pgccrc</code>.</p>
+<p>For example, PGI does not support the <code>-pthread</code> flag, and will error out if it
+encounters this flag. For some situations, using the <code>-lpthread</code> flag would be
+the solution - but other situations do not allow you to make this change.
+Instead, a filter can be set within the PGI configuration which checks for the
+<code>-pthread</code> flag and replaces it with the <code>-lpthread</code> flag. The configuration to
+achieve this is <code>switch -pthread is replace(-lpthread) positional(linker);</code>.</p>
+</article>
+
+      <div class="book-footer justify-between">
+  
+
+  
+  
+  <div>
+    
+    <a class="flex align-center" href="https://github.com/ecr-cluster/ecr-cluster.github.io/commit/9a8c37fb3da3443a55e4ceeb377fab5e6e7f9667" title='Last modified by Hans-Nikolai Viessmann | Dec 15, 2019' target="_blank">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Dec 15, 2019</span>
+    </a>
+  </div>
+  
+  
+
+  
+  <div>
+    <a class="flex align-center" href="https://github.com/ecr-cluster/ecr-cluster.github.io/edit/dev/content/docs/compilers.md" target="_blank">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+  
+
+</div>
+
+      
+    </div>
+
+    
+  
+
+  <aside class="book-toc levels-6 fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#gnu-compiler-collection">GNU Compiler Collection</a></li>
+    <li><a href="#intel-compiler-suite">Intel Compiler Suite</a></li>
+    <li><a href="#portland-group-compiler-suite">Portland Group Compiler Suite</a>
+      <ul>
+        <li><a href="#advice-and-tips">Advice and Tips</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+</body>
+
+</html>

@@ -12,6 +12,28 @@
     
     
     <item>
+      <title>Changelog</title>
+      <link>https://ecr-cluster.github.io/docs/changelog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ecr-cluster.github.io/docs/changelog/</guid>
+      <description>Changelog About This page provides an overview of the most recent changes to the cluster.
+Legend    Mark Meaning     #NAME assigned to person with NAME   ### collaborative task   [DONE] task complete   [NNNN] task could not be completed   [DELAY] task has been delayed   [PART] task has been partly completed    Future Cluster upgrade Note Todo  Due to some strange configuration decision by Bright, systemd-journald logs are not persistent (WTF?</description>
+    </item>
+    
+    <item>
+      <title>Compilers</title>
+      <link>https://ecr-cluster.github.io/docs/compilers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ecr-cluster.github.io/docs/compilers/</guid>
+      <description>Compilers On the cluster we offer several C/C++/Fortran compilers through our modules system.
+Below is given a short introduction to these and a few tips on how best to utilise them.
+GNU Compiler Collection Intel Compiler Suite Portland Group Compiler Suite The best resource on using any of the PGI compilers is by reading their user guide, which can be found at http://www.pgroup.com/resources/docs.htm.
+Advice and Tips Compiler Flags The PGI developers recommend that a few key flags be active for all compilations, specifically -fast -Mipa=fast,inline.</description>
+    </item>
+    
+    <item>
       <title>The Cluster</title>
       <link>https://ecr-cluster.github.io/docs/the-cluster/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

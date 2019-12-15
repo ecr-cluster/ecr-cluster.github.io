@@ -20,6 +20,28 @@
     </item>
     
     <item>
+      <title>Changelog</title>
+      <link>https://ecr-cluster.github.io/docs/changelog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ecr-cluster.github.io/docs/changelog/</guid>
+      <description>Changelog About This page provides an overview of the most recent changes to the cluster.
+Legend    Mark Meaning     #NAME assigned to person with NAME   ### collaborative task   [DONE] task complete   [NNNN] task could not be completed   [DELAY] task has been delayed   [PART] task has been partly completed    Future Cluster upgrade Note Todo  Due to some strange configuration decision by Bright, systemd-journald logs are not persistent (WTF?</description>
+    </item>
+    
+    <item>
+      <title>Compilers</title>
+      <link>https://ecr-cluster.github.io/docs/compilers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ecr-cluster.github.io/docs/compilers/</guid>
+      <description>Compilers On the cluster we offer several C/C++/Fortran compilers through our modules system.
+Below is given a short introduction to these and a few tips on how best to utilise them.
+GNU Compiler Collection Intel Compiler Suite Portland Group Compiler Suite The best resource on using any of the PGI compilers is by reading their user guide, which can be found at http://www.pgroup.com/resources/docs.htm.
+Advice and Tips Compiler Flags The PGI developers recommend that a few key flags be active for all compilations, specifically -fast -Mipa=fast,inline.</description>
+    </item>
+    
+    <item>
       <title>Register</title>
       <link>https://ecr-cluster.github.io/register/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -37,6 +59,26 @@ NOTE: not all requests to access the cluster will be accepted! Please consider t
       <guid>https://ecr-cluster.github.io/docs/the-cluster/</guid>
       <description>The Cluster The cluster is made up of 1 head node and 10 compute nodes. Of the compute nodes, 8 are AMD based systems while the other 2 are Intel based systems. Here is the following hardware stack for all of the nodes:
    Node Type Node Name Processor RAM HDD (/tmp) Extra Components     Head Node robotarium AMD Opteron 6320 (8 cores) 64 GB 916 GB &amp;mdash;   AMD Compute Node gpu01, gpu02, gpu03, gpu04, gpu05, gpu06 4x AMD Opteron 6376 (64 cores) 512 GB 40 GB NVIDIA K20 GPU, (2x in gpu06)   AMD Compute Node (Large RAM) gpu07, gpu08 4x AMD Opteron 6376 (64 cores) 1024 GB 40 GB NVIDIA K20 GPU (only in gpu07), 2x NVIDIA Titan Xp GPUs (only in gpu08)   Intel Compute Node mic01, mic02 2x Intel Xeon E5-2650v2 (16 cores) 128 GB 40 GB &amp;mdash;   NVIDIA DGX1 Node dgx01 2x Intel Xeon E5-2698v4 (40 cores) 512 GB 440 GB (7 TB at /raid/scratch) 8x NVIDIA Tesla P100    In addition to the above listed nodes, there are also some special-purpose nodes &amp;mdash; specifically, the cluster has eight Intel MIC nodes:</description>
+    </item>
+    
+    <item>
+      <title>Publications</title>
+      <link>https://ecr-cluster.github.io/publications/</link>
+      <pubDate>Sun, 15 Dec 2019 15:54:51 +0100</pubDate>
+      
+      <guid>https://ecr-cluster.github.io/publications/</guid>
+      <description>Publications Here are listed a few publications associated with the cluster. If you would like to have your publications listed here, please use the contact form. Please don&#39;t forget to reference the cluster.
+2019 Artjoms Šinkarovs, Hans-Nikolai Vießmann, Sven-Bodo Scholz. 2019. Array Languages Make Neural Networks Fast. arXiv.org. Link: https://arxiv.org/abs/1912.05234v1
+2018 Hans-Nikolai Vießmann, Artjoms Šinkarovs, and Sven-Bodo Scholz. 2018. Extended Memory Reuse: An Optimisation for Reducing Memory Allocations. In Proceedings of the 30th Symposium on Implementation and Application of Functional Languages (IFL 2018), Matteo Cimini and Jay McCarthy (Eds.</description>
+    </item>
+    
+    <item>
+      <title>Sitemap</title>
+      <link>https://ecr-cluster.github.io/sitemap/</link>
+      <pubDate>Sun, 15 Dec 2019 15:03:18 +0100</pubDate>
+      
+      <guid>https://ecr-cluster.github.io/sitemap/</guid>
+      <description>Sitemap This page provides an index for all of the pages on this site.</description>
     </item>
     
     <item>

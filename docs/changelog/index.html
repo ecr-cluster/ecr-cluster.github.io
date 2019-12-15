@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Changelog"><meta property="og:title" content="Changelog" />
+<meta property="og:description" content="Changelog About This page provides an overview of the most recent changes to the cluster.
+Legend    Mark Meaning     #NAME assigned to person with NAME   ### collaborative task   [DONE] task complete   [NNNN] task could not be completed   [DELAY] task has been delayed   [PART] task has been partly completed    Future Cluster upgrade Note Todo  Due to some strange configuration decision by Bright, systemd-journald logs are not persistent (WTF?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ecr-cluster.github.io/docs/changelog/" />
+<meta property="article:modified_time" content="2019-12-15T16:05:55+01:00" />
+<title>Changelog | ECR Cluster Documentation Site</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/book.min.ffcc479e5aed144aa83aae87934a807d45199ce59d7618be86aff4b9d776afa7.css" integrity="sha256-/8xHnlrtFEqoOq6Hk0qAfUUZnOWddhi&#43;hq/0udd2r6c=">
+
+
+<script defer src="/en.search.min.ba67c196c38f9f2256dad5a092623bf77347a39f72a492f954abdee8ca5e01f2.js" integrity="sha256-umfBlsOPnyJW2tWgkmI793NHo59ypJL5VKve6MpeAfI="></script>
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<img src="https://ecr-cluster.github.io//img/logo.png" alt="ECR Logo" class="custom-img-logo" />
+<h2 class="book-brand">
+  <a href="https://ecr-cluster.github.io/">ECR Cluster Documentation Site</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    <ul>
+<li><a href="/"><strong>About</strong></a>
+<ul>
+<li><a href="/publications/">Publications</a></li>
+</ul>
+</li>
+<li><a href="/register"><strong>Register</strong></a></li>
+<li><strong>Documentation</strong>
+<ul>
+<li><a href="/docs/the-cluster/">The Cluster</a></li>
+<li><a href="/docs/quick-start/">Quick Start</a></li>
+<li><a href="/docs/how-to/">How To</a></li>
+</ul>
+</li>
+<li><a href="/faq"><strong>FAQ</strong></a></li>
+<li><a href="/contact-us"><strong>Contact Us</strong></a></li>
+<li><a href="/terms"><strong>Terms and Conditions</strong></a></li>
+<li><a href="/sitemap"><strong>Sitemap</strong></a></li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+  <strong>Changelog</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="changelog">Changelog</h1>
+<h2 id="about">About</h2>
+<p>This page provides an overview of the most recent changes to the cluster.</p>
+<h3 id="legend">Legend</h3>
+<table>
+<thead>
+<tr>
+<th>Mark</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>#NAME</strong></td>
+<td>assigned to person with NAME</td>
+</tr>
+<tr>
+<td><strong>###</strong></td>
+<td>collaborative task</td>
+</tr>
+<tr>
+<td><strong>[DONE]</strong></td>
+<td>task complete</td>
+</tr>
+<tr>
+<td><strong>[NNNN]</strong></td>
+<td>task could not be completed</td>
+</tr>
+<tr>
+<td><strong>[DELAY]</strong></td>
+<td>task has been delayed</td>
+</tr>
+<tr>
+<td><strong>[PART]</strong></td>
+<td>task has been partly completed</td>
+</tr>
+</tbody>
+</table>
+<h2 id="future-cluster-upgrade">Future Cluster upgrade</h2>
+<h3 id="note">Note</h3>
+<h3 id="todo">Todo</h3>
+<ul>
+<li>Due to some strange configuration decision by Bright, systemd-journald logs are not persistent (WTF?!). The fix is simple, change the <code>Storage</code> key-value to <code>persistent</code> in <code>/etc/systemd/journald.conf</code>.</li>
+<li><code>numa-devel</code> package (needed for some operations of the hwloc library) is not installed consistently on all nodes!</li>
+</ul>
+<h2 id="jan-2019-software-stack-upgrade">(Jan 2019) Software Stack upgrade</h2>
+<h3 id="tasks">Tasks</h3>
+<ul>
+<li>General software update (headnode + nodes)
+<ul>
+<li>Move to BCM 8.1 <strong>[DONE]</strong></li>
+<li>Nvidia now (Nov. 2018) support RHEL-based distros on the DGX-1 (see <a href="http://go.nvidianews.com/h671aUF02O0001EjM900NNk">http://go.nvidianews.com/h671aUF02O0001EjM900NNk</a>) - using RHEL7 would be a better choice in the long term given that all the other nodes use RHEL7. <strong>[DELAY]</strong></li>
+<li>Upgrade MLNX firmware (not possible on <code>gpu0[1-8]</code> as the ASUS card is OEM-shit!) <strong>[PART]</strong></li>
+<li>Setup CPU-based OpenCL support (using the <code>amd-app-sdk</code> - note that AMD longer supports this, as such max OCL API version support is 1.2) <strong>[DONE]</strong></li>
+</ul>
+</li>
+<li>Extension of NetData panel with live status output for users (maybe? <strong>definitely not doing this as there are performance related concerns</strong>)</li>
+<li>Local Docker and Singularity Registry
+<ul>
+<li>Setup cm-singularity&hellip; <strong>[DONE]</strong>
+<ul>
+<li>actually, we want to compile from source - also testing has revealed that accessing the NV-related libraries stored in <code>/cm/shared</code> via singularity image is non-trivial. Further work is needed, though nothing significant as far as I can tell.</li>
+<li>There is no stable registry like service yet other than SyLabs Cloud (a Docker Hub contender), which is free but for public images only&hellip;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Mirror NVIDIA Docker Registry (is this really useful?) <strong>[DELAY]</strong></li>
+</ul>
+<h3 id="notes">Notes</h3>
+<p>The main purpose here is to allow users to use Docker images for their work. Main reason is that several vendors/frameworks provide Docker images that are specially optimised (how, and to what degree, is not known) and these optimisation are not available as binary releases (ugh&hellip;). Additionally some user prefer docker as it simplifies managing their environment and maintains a degree of consistency across machines/distros.</p>
+<p>Main problem: docker is insecure for multi-user environments, has no resource management, and requires additional infrastructure/management. Solution: Singularity (<a href="http://singularity.lbl.gov/index.html),">http://singularity.lbl.gov/index.html),</a> which is a tool which converts docker images to binaries - which generate a fs-tree within a chroot. There is no need for a hypervisor or other infrastructure and it works well together with existing management systems like SLURM. Additionally is recommended by Bright Computing (CM provider).</p>
+<p>Of course, the usual system updating should be done. In particular CUDA 9.1 is out, so it might be nice for users - especially on <code>dgx01</code>.</p>
+<p>RDMA setup is not working correctly as the <code>ib_srp</code> kernel module has some strange version mismatch meaning it will not load into the kernel&hellip; this is not critical though as SRP protocol is used for accessing SCSI-related resources on a remote system&hellip; as far as I know no-one needs this feature.</p>
+<h2 id="oct-2017-dgx-1-upgrade-ubuntu-14-to-16">(Oct 2017) DGX-1 Upgrade Ubuntu 14 to 16</h2>
+<h3 id="tasks-1">Tasks</h3>
+<ul>
+<li>CM 8.0 Upgrade <strong>[DONE]</strong>
+<ul>
+<li>Reset GPU/Intel node images (maybe?) <strong>[DONE]</strong></li>
+</ul>
+</li>
+<li>DGX-1
+<ul>
+<li>Upgrade to latest image <strong>[DONE]</strong>  &mdash; //thank you Rob Stewart//</li>
+<li>Upgrade BMC to latest firmware <strong>[DONE]</strong> &mdash; //thank you Rob Stewart//</li>
+<li>Get CM 8.0 provision working (maybe?) <strong>[DELAY]</strong></li>
+<li>Setup Slurm-client <strong>[DONE]</strong></li>
+<li>Setup/Test NVIDIA Registry <strong>[PART]</strong>
+<ul>
+<li>See how well this works with Singularity <strong>[PART]</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Extend Wiki to include Singularity Examples <strong>[DELAY]</strong></li>
+<li>Extend <code>salloc</code> block to nodes <strong>[DONE]</strong></li>
+<li>Upgrade to CUDA 9.0 <strong>[DONE]</strong>
+<ul>
+<li>Upgrade to cuDNN v6 and v7 <strong>[DONE]</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="notes-1">Notes</h3>
+<ul>
+<li>DGX-1
+<ul>
+<li>NVIDIA have released Ubuntu 16 image for the box - which supports the latest version of SLURM, meaning we can now setup batch managment control there.</li>
+<li>After DGX-UG meeting, Docker based system seems like a nice solution to reduce lag in installing user modules/keeping the modules system up to date &mdash; using EasyBuild is aweful. We cannot setup docker as its insecure (allows for privilage esciliation from within the container), but instead we can use <a href="http://singularity.lbl.gov/index.html">Singularity</a> which converts a Docker image into set of scripts which generated a fake-chroot. No privilages are needed for this + its easier to gain access to the hardware as there isn't a hypervisor. Users can just extend/create a sbatch script which launched their Singularity image as such.</li>
+</ul>
+</li>
+<li>CM 8.0 is out, with the primary update being to support more Linux Distros as slave-nodes - which is fanatastic because it means we could potentially provision the DGX-1 using NVIDIA image - Whoo!!! Other then that they hve updated their data gathering and monitoring system (to what effect I don't know), and a new snazzy web-based management interface.</li>
+</ul>
+<h2 id="nov-2016-cluster-rhel6-to-rhel7-upgrade">(Nov 2016) Cluster RHEL6 to RHEL7 upgrade</h2>
+<h3 id="tasks-2">Tasks</h3>
+<ul>
+<li>Configure default account settings (simplifies users initial experience) <strong>[DONE]</strong>
+<ul>
+<li>Create informative banner + motd <strong>[DONE]</strong></li>
+<li>Set default modules (e.g. <code>shared</code>) <strong>[DONE]</strong></li>
+</ul>
+</li>
+<li>Install additional packages
+<ul>
+<li>GCC (4.8 and 6.1) + glibc 2.17 <strong>[DONE]</strong></li>
+<li>Intel Compiler Suite
+<ul>
+<li>Intel VTune facility</li>
+</ul>
+</li>
+<li>Portland Compiler Suite <strong>[DONE]</strong></li>
+<li>Python + pip (versions 2.7 and 3.4) <strong>[DONE]</strong></li>
+</ul>
+</li>
+<li>Configure cluster management system
+<ul>
+<li>Adaptive user access to nodes (SSH) <strong>[DONE]</strong></li>
+<li>Add MIC hosts and MIC nodes
+<ul>
+<li>identify MIC processor units</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Configuration of SLURM
+<ul>
+<li>GPU types setup (mainly for gpu08) <strong>[DONE]</strong></li>
+<li>Create dedicated MIC queue</li>
+<li>Initiate Usage logging facility (needed in order to log the number of hours, cpu cores, gpus, etc. used by a user or job) <strong>#Igor</strong></li>
+</ul>
+</li>
+<li>Configure Nodes
+<ul>
+<li>Head Node
+<ul>
+<li>Propagate sudoers file to nodes using systemd timers and <code>rsync</code> <strong>[DONE]</strong></li>
+<li>Apcupsd for APC monitoring <strong>[DONE]</strong>
+<ul>
+<li>Setup notification <strong>[DONE]</strong> //not necessary as default settings are adequate//</li>
+</ul>
+</li>
+<li>Configure SNMP for compute nodes (from IPMI) - this allows use to receive hardware level notification outwith the OS</li>
+</ul>
+</li>
+<li>MIC Nodes
+<ul>
+<li>Setup the MIC Node image (copy from <code>default</code> image) <strong>#Igor</strong></li>
+<li>Configure MICs <a href="https://software.intel.com/en-us/articles/intel-manycore-platform-software-stack-mpss#lx37rel">relevent</a> <strong>#Igor</strong>
+<ul>
+<li>install the MIC toolchain <strong>#Igor</strong></li>
+<li>compile dedicated linux kernel <strong>#Igor</strong></li>
+</ul>
+</li>
+<li>InfiniBand firmware update <strong>[DONE]</strong>
+<ul>
+<li>install OFED framework <strong>[DONE]</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>GPU Nodes
+<ul>
+<li>Setup GPU node image <strong>[DONE]</strong>
+<ul>
+<li>install cuda-driver <strong>[DONE]</strong></li>
+</ul>
+</li>
+<li>InfiniBand firmware update
+<ul>
+<li>Currently running OEM //ConnectX 2 VPI// firmware</li>
+</ul>
+</li>
+<li>install OFED framework <strong>[DONE]</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Update Intranet Wiki
+<ul>
+<li>New usage pattern for nodes (user can now SSH to node IFF they allocate the node, e.g. <code>salloc -N 1</code>). This allows users to now directly interact with a node, monitor processes, and in some cases install there own software. Be aware, the node is stateless, thus on a weekly cycle it will be re-installed and all data there will be lost. #Hans</li>
+<li>Provide more examples on using SLURM in general - with support for multiple GPU types, the user can now explicitly select the K20 or Quadro 6000.</li>
+<li>(Internal pages) Include description of cluster upgrade process as well as custom configurations. <strong>###</strong></li>
+</ul>
+</li>
+</ul>
+<h4 id="backburner">Backburner</h4>
+<ul>
+<li>Setup <a href="http://www.yarp.it/">YARP</a></li>
+<li>Setup MatLab clustering</li>
+</ul>
+<h3 id="notes-2">Notes</h3>
+<h4 id="infiniband">InfiniBand</h4>
+<ul>
+<li>It is not clear yet if the switch is acting as the sub-net manager or if one needs to be setup (e.g. <code>opensm</code>).</li>
+<li>Though the firmware versions of the IB adaptors are usable for OFED 3.4 from Mallonex, there seems to be a slight problem with the adaptors install on the GPU nodes. These are <strong>not</strong> original Mallonex adaptors, but some OEM ones (probably ASUS, but maybe HP). As such their <code>device_id</code> is not recognised (actually is unparsable) by the OFED management tools/services. This <em>so far</em> is not problematic, but could cause problems if an application needs specific features the OEM firmware is lacking.</li>
+<li><strong>kernel version locked</strong>, due to how the OFED is setup, any updates to the kernel require a complete re-install of the OFED. <code>yum</code> is already setup to ignore kernel package updates.</li>
+</ul>
+<h4 id="node-imaging">Node Imaging</h4>
+<ul>
+<li>The tools/procedures to do node imaging is rather unrefined, and open to errors. In essences, though the CM systems has a notion of variants on images, it provides no means of merging these together to create one. Instead on needs to keep moving forward (which risks missing out on packages updates).</li>
+<li><strong>Do not do anything in parallel</strong> - work cannot be shared when dealing with chroot an image.</li>
+</ul>
+<h4 id="apcupsd">APCupsd</h4>
+<ul>
+<li>The default settings of <code>apcupsd</code> are adequate. In future, if further action is wanted, we can extent the functionality by adding scripts to <code>/etc/apcupsd</code> (see <code>/etc/apcupsd/apccontrol</code> for examples).</li>
+</ul>
+<h4 id="slurm">SLURM</h4>
+<h5 id="gpu08-or-having-multiple-gpus">GPU08 (or having multiple GPUs)</h5>
+<ul>
+<li>The CMD way of setting things up is through <em>Roles</em>, which describe certain properties. These are interpreted and result in configuration files on the node being populated (in this instance, <code>/etc/slurm/slurm.conf</code> and <code>/etc/slurm/gres.conf</code>). The relevant properties are
+<ul>
+<li><code>gpus</code></li>
+<li><code>gpudevices</code></li>
+<li>and <code>gres</code></li>
+</ul>
+</li>
+<li>These properties though are not what we want, which is to setup GRES Types, in order to distinguish between GPU types. Setting <code>gpus</code> indicates the number of GPUs we have, but not their type. Setting <code>gres</code> allows use to set an arbitrary GRES type, which not useful here. And finally we have <code>gepudevices</code>; this allows use to enter in a list of GPU devices as path references (e.g. <code>/dev/nvidia0</code>). A funny thing about this property is that it no interpreted or sanitised in any way - we can right anything here we want.</li>
+<li>What we want is:</li>
+</ul>
+<pre><code>Name=gpu File=/dev/nvidia0 Type=tesla
+Name=gpu File=/dev/nvidia1 Type=quadro
+</code></pre><ul>
+<li>The <code>gpudevices</code> property fills the space in <code>&lt;&gt;</code>, e.g. <code>Name=gpu File=&lt;&gt;</code></li>
+<li>So to get something like above we do
+<ul>
+<li><code>gpudevices</code> equals <code>/dev/nvidia0 Type=tesla\nName=gpu File=/dev/nvidia1 Type=quadro</code>; notice the <code>\n</code> (newline character).</li>
+</ul>
+</li>
+<li><strong>This is a hack, this must be checked if we ever upgrade!</strong> <em>There is no other way of doing this sadly.</em></li>
+</ul>
+</article>
+
+      <div class="book-footer justify-between">
+  
+
+  
+  
+  <div>
+    
+    <a class="flex align-center" href="https://github.com/ecr-cluster/ecr-cluster.github.io/commit/9a8c37fb3da3443a55e4ceeb377fab5e6e7f9667" title='Last modified by Hans-Nikolai Viessmann | Dec 15, 2019' target="_blank">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Dec 15, 2019</span>
+    </a>
+  </div>
+  
+  
+
+  
+  <div>
+    <a class="flex align-center" href="https://github.com/ecr-cluster/ecr-cluster.github.io/edit/dev/content/docs/changelog.md" target="_blank">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+  
+
+</div>
+
+      
+    </div>
+
+    
+  
+
+  <aside class="book-toc levels-6 fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#about">About</a>
+      <ul>
+        <li><a href="#legend">Legend</a></li>
+      </ul>
+    </li>
+    <li><a href="#future-cluster-upgrade">Future Cluster upgrade</a>
+      <ul>
+        <li><a href="#note">Note</a></li>
+        <li><a href="#todo">Todo</a></li>
+      </ul>
+    </li>
+    <li><a href="#jan-2019-software-stack-upgrade">(Jan 2019) Software Stack upgrade</a>
+      <ul>
+        <li><a href="#tasks">Tasks</a></li>
+        <li><a href="#notes">Notes</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-2017-dgx-1-upgrade-ubuntu-14-to-16">(Oct 2017) DGX-1 Upgrade Ubuntu 14 to 16</a>
+      <ul>
+        <li><a href="#tasks-1">Tasks</a></li>
+        <li><a href="#notes-1">Notes</a></li>
+      </ul>
+    </li>
+    <li><a href="#nov-2016-cluster-rhel6-to-rhel7-upgrade">(Nov 2016) Cluster RHEL6 to RHEL7 upgrade</a>
+      <ul>
+        <li><a href="#tasks-2">Tasks</a></li>
+        <li><a href="#notes-2">Notes</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+</body>
+
+</html>
