@@ -4,6 +4,11 @@ title = "ECR Cluster Documentation Site"
 enableEmoji = true
 theme = "book"
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 # theme "book" configuration
 enableGitInfo = true
 [params]
