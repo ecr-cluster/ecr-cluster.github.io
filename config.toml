@@ -12,8 +12,9 @@ theme = "book"
 # theme "book" configuration
 enableGitInfo = true
 [params]
-BookMenuBundle = '/menu'
-BookRepo = 'https://github.com/ecr-cluster/ecr-cluster.github.io'
-BookEditPath = 'edit/dev/content'
-BookDateFormat = 'Jan 2, 2006'
-BookSearch = true
+    BookMenuBundle = '/menu'
+    BookRepo = 'https://github.com/ecr-cluster/ecr-cluster.github.io'
+    BookEditPath = 'edit/dev/content'
+    BookDateFormat = 'Jan 2, 2006'
+    BookSearch = true
+    BookComments = false
