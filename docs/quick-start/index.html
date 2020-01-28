@@ -7,7 +7,8 @@
 <meta name="description" content="Quick Start"><meta property="og:title" content="Quick Start" />
 <meta property="og:description" content="Quick Start This guide provides a quick-n-dirty series of steps to get you started on the cluster. The guides assumes the following:
  you have an account on the cluster you have experience with Linux-based systems (especially the command line) you have a SSH public-private key pair  Alright then, lift off!
-Accessing the Cluster (SSH) TBC" />
+Accessing the Cluster (SSH) Open up your favourite terminal and type the following:
+$ ssh &lt;username&gt;@robotarium.hw.ac.uk You can only access the cluster while inside the Heriot-Watt University network." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ecr-cluster.github.io/docs/quick-start/" />
 <meta property="article:published_time" content="2019-08-13T16:19:07+02:00" />
@@ -16,10 +17,10 @@ Accessing the Cluster (SSH) TBC" />
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
 
-<link rel="stylesheet" href="/book.min.ffcc479e5aed144aa83aae87934a807d45199ce59d7618be86aff4b9d776afa7.css" integrity="sha256-/8xHnlrtFEqoOq6Hk0qAfUUZnOWddhi&#43;hq/0udd2r6c=">
+<link rel="stylesheet" href="/book.min.9b08fdc3e7e785d12cb454abbc2f049c0941dd45bb7bf2cd4c02e90cc7a6a631.css" integrity="sha256-mwj9w&#43;fnhdEstFSrvC8EnAlB3UW7e/LNTALpDMempjE=">
 
 
-<script defer src="/en.search.min.c85c4d3850b9c24020994a736c97db4b2f18b7edc9dc28e2f672b16a5cb4dae4.js" integrity="sha256-yFxNOFC5wkAgmUpzbJfbSy8Yt&#43;3J3Cji9nKxaly02uQ="></script>
+<script defer src="/en.search.min.b70b0238e9e7f11114277cc88c351421be8f62fa826159154e48e6745a91945f.js" integrity="sha256-twsCOOnn8REUJ3zIjDUUIb6PYvqCYVkVTkjmdFqRlF8="></script>
 
 <!--
 Made with Book Theme
@@ -31,10 +32,10 @@ https://github.com/alex-shpak/hugo-book
 
 <body>
   <input type="checkbox" class="hidden" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
 <img src="https://ecr-cluster.github.io//img/logo.png" alt="ECR Logo" class="custom-img-logo" />
 <h2 class="book-brand">
   <a href="https://ecr-cluster.github.io/">ECR Cluster Documentation Site</a>
@@ -42,7 +43,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" />
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -51,7 +52,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    <ul>
+  <ul>
 <li><a href="/"><strong>About</strong></a>
 <ul>
 <li><a href="/publications/">Publications</a></li>
@@ -88,15 +89,44 @@ https://github.com/alex-shpak/hugo-book
 })();
 </script>
 
+ 
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>Quick Start</strong>
-</header>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#accessing-the-cluster-ssh">Accessing the Cluster (SSH)</a>
+      <ul>
+        <li><a href="#setting-up-ssh-key-access">Setting up SSH-key access</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
 
       
 <article class="markdown"><h1 id="quick-start">Quick Start</h1>
@@ -109,44 +139,76 @@ cluster. The guides assumes the following:</p>
 </ul>
 <p>Alright then, <em>lift off!</em></p>
 <h2 id="accessing-the-cluster-ssh">Accessing the Cluster (SSH)</h2>
+<p>Open up your favourite terminal and type the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ ssh &lt;username&gt;@robotarium.hw.ac.uk
+</code></pre></div><blockquote class="book-hint info">
+  You can only access the cluster while inside the Heriot-Watt University network.
+If you need access from outside the university, you can request VPN access thourgh
+the <a href="/contact-us">contact form</a>.
+</blockquote>
+
+<p>You'll be asked to enter in your password, which was provided to you when you signed up.</p>
+<h3 id="setting-up-ssh-key-access">Setting up SSH-key access</h3>
 <p><strong>TBC</strong></p>
 </article>
+ 
 
-      <div class="book-footer justify-between">
-  
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
 
-  
 
-  
+
+
+
   <div>
-    <a class="flex align-center" href="https://github.com/ecr-cluster/ecr-cluster.github.io/edit/dev/content/docs/quick-start.md" target="_blank">
+    <a class="flex align-center" href="https://github.com/ecr-cluster/ecr-cluster.github.io/edit/dev/content/docs/quick-start.md" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
       <span>Edit this page</span>
     </a>
   </div>
-  
 
 </div>
 
+ 
+        
+  
+ 
+      </footer>
       
     </div>
 
     
-  
-
-  <aside class="book-toc levels-6 fixed">
-    <nav id="TableOfContents">
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
   <ul>
-    <li><a href="#accessing-the-cluster-ssh">Accessing the Cluster (SSH)</a></li>
+    <li><a href="#accessing-the-cluster-ssh">Accessing the Cluster (SSH)</a>
+      <ul>
+        <li><a href="#setting-up-ssh-key-access">Setting up SSH-key access</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
-  </aside>
 
-
-
+ 
+    </aside>
+    
   </main>
 
   
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Docs on ECR Cluster Documentation Site</title>
+    <title>Documentation on ECR Cluster Documentation Site</title>
     <link>https://ecr-cluster.github.io/docs/</link>
-    <description>Recent content in Docs on ECR Cluster Documentation Site</description>
+    <description>Recent content in Documentation on ECR Cluster Documentation Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 13 Aug 2019 16:35:22 +0200</lastBuildDate>
@@ -61,7 +61,8 @@ Note: this page is still being populated, if you feel that anything is missing o
       <guid>https://ecr-cluster.github.io/docs/quick-start/</guid>
       <description>Quick Start This guide provides a quick-n-dirty series of steps to get you started on the cluster. The guides assumes the following:
  you have an account on the cluster you have experience with Linux-based systems (especially the command line) you have a SSH public-private key pair  Alright then, lift off!
-Accessing the Cluster (SSH) TBC</description>
+Accessing the Cluster (SSH) Open up your favourite terminal and type the following:
+$ ssh &amp;lt;username&amp;gt;@robotarium.hw.ac.uk You can only access the cluster while inside the Heriot-Watt University network.</description>
     </item>
     
   </channel>
