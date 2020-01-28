@@ -19,5 +19,21 @@ Alright then, _lift off!_
 Accessing the Cluster (SSH)
 ---------------------------
 
+Open up your favourite terminal and type the following:
+
+```sh
+$ ssh <username>@robotarium.hw.ac.uk
+```
+
+{{< hint info >}}
+You can only access the cluster while inside the Heriot-Watt University network.
+If you need access from outside the university, you can request VPN access thourgh
+the [contact form](/contact-us).
+{{< /hint >}}
+
+You'll be asked to enter in your password, which was provided to you when you signed up.
+
+### Setting up SSH-key access
+
 __TBC__
 

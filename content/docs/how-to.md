@@ -20,9 +20,6 @@ Basics
 
 ### Accessing the Cluster
 
-**The precise details of how to access the cluster are omitted from this site,
-please contact us for more information.**
-
 The cluster can only be accessed from within the Heriot-Watt University network.
 Users wishing to use it from outside the university will need to setup an SSH
 tunnel (see [SSH Forwarding](#ssh-forwarding)) or use the HW-VPN (please contact us to give you

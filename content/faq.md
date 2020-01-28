@@ -1,7 +1,6 @@
 ---
 title: "FAQ"
 weight: 1
-date: 2019-08-13T15:53:18+02:00
 type: docs
 ---
 
@@ -12,7 +11,7 @@ Information about the Cluster
 -----------------------------
 
 What are the available resources on the cluster?
-: A table showing the hardware specifications for all nodes provided [here]({{<
+: A table showing the hardware specifications for all nodes is provided [here]({{<
 relref "/docs/the-cluster.md" >}}).
 
 Who maintains the cluster?
