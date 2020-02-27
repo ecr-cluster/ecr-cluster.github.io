@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="The Cluster"><meta property="og:title" content="The Cluster" />
 <meta property="og:description" content="The Cluster The cluster is made up of 1 head node and 10 compute nodes. Of the compute nodes, 8 are AMD based systems while the other 2 are Intel based systems. Here is the following hardware stack for all of the nodes:
-   Node Type Node Name Processor RAM HDD (/tmp) Extra Components     Head Node robotarium AMD Opteron 6320 (8 cores) 64 GB 916 GB &mdash;   AMD Compute Node gpu01, gpu02, gpu03, gpu04, gpu05, gpu06 4x AMD Opteron 6376 (64 cores) 512 GB 40 GB NVIDIA K20 GPU, (2x in gpu06)   AMD Compute Node (Large RAM) gpu07, gpu08 4x AMD Opteron 6376 (64 cores) 1024 GB 40 GB NVIDIA K20 GPU (only in gpu07), 2x NVIDIA Titan Xp GPUs (only in gpu08)   Intel Compute Node mic01, mic02 2x Intel Xeon E5-2650v2 (16 cores) 128 GB 40 GB &mdash;   NVIDIA DGX1 Node dgx01 2x Intel Xeon E5-2698v4 (40 cores) 512 GB 440 GB (7 TB at /raid/scratch) 8x NVIDIA Tesla P100    In addition to the above listed nodes, there are also some special-purpose nodes &mdash; specifically, the cluster has eight Intel MIC nodes:" />
+Repairs The DGX1 node is currently unavailable due to fault GPU board. There is no ETA on when this will be repaired.     Node Type Node Name Processor RAM HDD (/tmp) Extra Components     Head Node robotarium AMD Opteron 6320 (8 cores) 64 GB 916 GB &mdash;   AMD Compute Node gpu01, gpu02, gpu03, gpu04, gpu05, gpu06 4x AMD Opteron 6376 (64 cores) 512 GB 40 GB NVIDIA K20 GPU, (2x in gpu06)   AMD Compute Node (Large RAM) gpu07, gpu08 4x AMD Opteron 6376 (64 cores) 1024 GB 40 GB NVIDIA K20 GPU (only in gpu07), 2x NVIDIA Titan Xp GPUs (only in gpu08)   Intel Compute Node mic01, mic02 2x Intel Xeon E5-2650v2 (16 cores) 128 GB 40 GB &mdash;   NVIDIA DGX1 Node dgx01 2x Intel Xeon E5-2698v4 (40 cores) 512 GB 440 GB (7 TB at /raid/scratch) 8x NVIDIA Tesla P100    In addition to the above listed nodes, there are also some special-purpose nodes &mdash; specifically, the cluster has eight Intel MIC nodes:" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ecr-cluster.github.io/docs/the-cluster/" />
 
@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="/book.min.9b08fdc3e7e785d12cb454abbc2f049c0941dd45bb7bf2cd4c02e90cc7a6a631.css" integrity="sha256-mwj9w&#43;fnhdEstFSrvC8EnAlB3UW7e/LNTALpDMempjE=">
 
 
-<script defer src="/en.search.min.b70b0238e9e7f11114277cc88c351421be8f62fa826159154e48e6745a91945f.js" integrity="sha256-twsCOOnn8REUJ3zIjDUUIb6PYvqCYVkVTkjmdFqRlF8="></script>
+<script defer src="/en.search.min.3bd4491879362efa4ca6aa4a2bc713f0e63f96c339a04f011a2b272132b53d10.js" integrity="sha256-O9RJGHk2LvpMpqpKK8cT8OY/lsM5oE8BGisnITK1PRA="></script>
 
 <!--
 Made with Book Theme
@@ -122,6 +122,11 @@ https://github.com/alex-shpak/hugo-book
 <p>The cluster is made up of 1 head node and 10 compute nodes. Of the compute
 nodes, 8 are AMD based systems while the other 2 are Intel based systems. Here
 is the following hardware stack for all of the nodes:</p>
+<blockquote class="book-hint warning">
+  <strong>Repairs</strong>
+The DGX1 node is currently unavailable due to fault GPU board. There is no ETA on when this will be repaired.
+</blockquote>
+
 <table>
 <thead>
 <tr>

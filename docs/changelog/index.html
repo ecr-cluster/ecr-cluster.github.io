@@ -17,7 +17,7 @@ Legend    Mark Meaning     #NAME assigned to person with NAME   ### collaborativ
 <link rel="stylesheet" href="/book.min.9b08fdc3e7e785d12cb454abbc2f049c0941dd45bb7bf2cd4c02e90cc7a6a631.css" integrity="sha256-mwj9w&#43;fnhdEstFSrvC8EnAlB3UW7e/LNTALpDMempjE=">
 
 
-<script defer src="/en.search.min.b70b0238e9e7f11114277cc88c351421be8f62fa826159154e48e6745a91945f.js" integrity="sha256-twsCOOnn8REUJ3zIjDUUIb6PYvqCYVkVTkjmdFqRlF8="></script>
+<script defer src="/en.search.min.3bd4491879362efa4ca6aa4a2bc713f0e63f96c339a04f011a2b272132b53d10.js" integrity="sha256-O9RJGHk2LvpMpqpKK8cT8OY/lsM5oE8BGisnITK1PRA="></script>
 
 <!--
 Made with Book Theme
@@ -258,10 +258,10 @@ https://github.com/alex-shpak/hugo-book
 <li>DGX-1
 <ul>
 <li>NVIDIA have released Ubuntu 16 image for the box - which supports the latest version of SLURM, meaning we can now setup batch managment control there.</li>
-<li>After DGX-UG meeting, Docker based system seems like a nice solution to reduce lag in installing user modules/keeping the modules system up to date &mdash; using EasyBuild is aweful. We cannot setup docker as its insecure (allows for privilage esciliation from within the container), but instead we can use <a href="http://singularity.lbl.gov/index.html">Singularity</a> which converts a Docker image into set of scripts which generated a fake-chroot. No privilages are needed for this + its easier to gain access to the hardware as there isn't a hypervisor. Users can just extend/create a sbatch script which launched their Singularity image as such.</li>
+<li>After DGX-UG meeting, Docker based system seems like a nice solution to reduce lag in installing user modules/keeping the modules system up to date &mdash; using EasyBuild is aweful. We cannot setup docker as its insecure (allows for privilage esciliation from within the container), but instead we can use <a href="http://singularity.lbl.gov/index.html">Singularity</a> which converts a Docker image into set of scripts which generated a fake-chroot. No privilages are needed for this + its easier to gain access to the hardware as there isn&rsquo;t a hypervisor. Users can just extend/create a sbatch script which launched their Singularity image as such.</li>
 </ul>
 </li>
-<li>CM 8.0 is out, with the primary update being to support more Linux Distros as slave-nodes - which is fanatastic because it means we could potentially provision the DGX-1 using NVIDIA image - Whoo!!! Other then that they hve updated their data gathering and monitoring system (to what effect I don't know), and a new snazzy web-based management interface.</li>
+<li>CM 8.0 is out, with the primary update being to support more Linux Distros as slave-nodes - which is fanatastic because it means we could potentially provision the DGX-1 using NVIDIA image - Whoo!!! Other then that they hve updated their data gathering and monitoring system (to what effect I don&rsquo;t know), and a new snazzy web-based management interface.</li>
 </ul>
 <h2 id="nov-2016-cluster-rhel6-to-rhel7-upgrade">(Nov 2016) Cluster RHEL6 to RHEL7 upgrade</h2>
 <h3 id="tasks-2">Tasks</h3>
