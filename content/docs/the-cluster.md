@@ -12,6 +12,11 @@ The cluster is made up of 1 head node and 10 compute nodes. Of the compute
 nodes, 8 are AMD based systems while the other 2 are Intel based systems. Here
 is the following hardware stack for all of the nodes:
 
+{{< hint warning >}}
+**Repairs**
+The DGX1 node is currently unavailable due to fault GPU board. There is no ETA on when this will be repaired.
+{{< /hint >}}
+
 Node Type | Node Name | Processor | RAM | HDD (`/tmp`) | Extra Components
 --- | --- | --- | --- | --- | ---
 Head Node | `robotarium` | AMD Opteron 6320 (8 cores) | 64 GB | 916 GB | ---
