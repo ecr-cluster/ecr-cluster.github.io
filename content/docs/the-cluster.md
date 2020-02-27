@@ -14,7 +14,7 @@ is the following hardware stack for all of the nodes:
 
 {{< hint warning >}}
 **Repairs**
-The DGX1 node is currently unavailable due to fault GPU board. There is no ETA on when this will be repaired.
+The DGX1 node is currently unavailable due to faulty GPU board. There is no ETA on when this will be repaired.
 {{< /hint >}}
 
 Node Type | Node Name | Processor | RAM | HDD (`/tmp`) | Extra Components
