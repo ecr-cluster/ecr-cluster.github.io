@@ -9,8 +9,8 @@
 Note: this page is still being populated, if you feel that anything is missing or amiss please contact us and we&rsquo;ll update this page appropriately." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ecr-cluster.github.io/docs/how-to/" />
-<meta property="article:published_time" content="2019-08-13T16:35:22+02:00" />
-<meta property="article:modified_time" content="2019-08-13T16:35:22+02:00" />
+<meta property="article:published_time" content="2020-08-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-08-10T00:00:00+00:00" />
 <title>How To | ECR Cluster Documentation Site</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
@@ -18,7 +18,7 @@ Note: this page is still being populated, if you feel that anything is missing o
 <link rel="stylesheet" href="/book.min.9b08fdc3e7e785d12cb454abbc2f049c0941dd45bb7bf2cd4c02e90cc7a6a631.css" integrity="sha256-mwj9w&#43;fnhdEstFSrvC8EnAlB3UW7e/LNTALpDMempjE=">
 
 
-<script defer src="/en.search.min.385a5f4076e61922eed4a0d6a915c3a094cfe41ba1dd617d85145e10d528dadc.js" integrity="sha256-OFpfQHbmGSLu1KDWqRXDoJTP5Buh3WF9hRReENUo2tw="></script>
+<script defer src="/en.search.min.856160f34c15c8db75174cd4e0a4f0f230c30d85581dd058f5d4538be4718286.js" integrity="sha256-hWFg80wVyNt1F0zU4KTw8jDDDYVYHdBY9dRTi&#43;RxgoY="></script>
 
 <!--
 Made with Book Theme
@@ -151,8 +151,9 @@ or amiss please contact us and we&rsquo;ll update this page appropriately.</em><
 <h3 id="accessing-the-cluster">Accessing the Cluster</h3>
 <p>The cluster can only be accessed from within the Heriot-Watt University network.
 Users wishing to use it from outside the university will need to setup an SSH
-tunnel (see <a href="#ssh-forwarding">SSH Forwarding</a>) or use the HW-VPN (please contact us to give you
-access. HW staff have VPN access per default (see the HW-VPN details).</p>
+tunnel (see <a href="#ssh-forwarding">SSH Forwarding</a>) or use the HW-VPN (please contact
+us to give you access). HW staff have VPN access per default (see the HW-VPN
+details).</p>
 <blockquote>
 <p><strong>Notice</strong>
 There is a <a href="//robotarium.hw.ac.uk/userportal">user portal website</a> available
@@ -298,7 +299,7 @@ queues again. They also allow you to specify your program&rsquo;s exact needs.</
 This is a heterogeneous cluster! Not all codes can be run on all nodes! The
 nodes <code>gpu01-gpu08</code> have AMD-based CPUs, the nodes <code>mic01-mic02</code> have INTEL-based
 CPUs. Both are i86 compatible but depending on the level of compiler
-optimisation your programs may only run one of these two architectures.
+optimisation your programs may only run on one of these two architectures.
 Furthermore, your code may or may not expect a certain number or even version
 of GPU or a MIC to be available. If so, you need to make sure that you specify
 your needs as precisely as possible; otherwise, your code will fail to run or
@@ -308,8 +309,8 @@ suffer poor performance!</p>
 <ul>
 <li>the number of nodes you want <code>--nodes=&lt;n&gt;</code></li>
 <li>which nodes you do or do not want <code>--nodelist=&lt;name,name,...&gt;</code> / <code>--exclude=&lt;name,name,...&gt;</code></li>
-<li>how many cpus you want <code>-c&lt;n&gt;</code></li>
-<li>which resources (gpus) you want <code>--gres=&lt;gres,gres,...&gt;</code></li>
+<li>how many CPUs you want <code>-c&lt;n&gt;</code></li>
+<li>which resources (GPUs) you want <code>--gres=&lt;gres,gres,...&gt;</code></li>
 </ul>
 <p>Example usage:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># to run a command and have its output printed in the shell we use the `srun&#39; command</span>
@@ -336,7 +337,7 @@ $ srun --partition<span style="color:#f92672">=</span>amd-longq --gres<span styl
 <span style="color:#75715e"># please do only specify `--gres=gpu&#39; if your code *actually does use* a gpu!</span>
 
 <span style="color:#75715e">#If you want to use a system that requires two &#39;K20` gpus for less than 1 hour:</span>
-$ srun --gres<span style="color:#f92672">=</span><span style="color:#f92672">=</span>gpu:k20:2 &lt;...command...&gt; &lt;...args...&gt;
+$ srun --gres<span style="color:#f92672">==</span>gpu:k20:2 &lt;...command...&gt; &lt;...args...&gt;
 
 <span style="color:#75715e"># to run in &#39;batch&#39; mode, we use the `sbatch&#39; command</span>
 <span style="color:#75715e"># these examples are the same as those above</span>
@@ -379,10 +380,10 @@ module for a piece of software to work, this can be encoded into the module
 file.</p>
 <p>The first step is to create a <code>.modulerc</code> file your home directory, e.g.
 <code>~/.modulerc</code>. File should contain the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tcl" data-lang="tcl"><span style="color:#75715e">#</span><span style="color:#75715e">%Module -*- tcl -*-
-</span><span style="color:#75715e"></span><span style="color:#75715e">#</span><span style="color:#75715e"># get extra modules files...
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tcl" data-lang="tcl"><span style="color:#75715e">#%Module -*- tcl -*-
+</span><span style="color:#75715e">## get extra modules files...
 </span><span style="color:#75715e">
-</span><span style="color:#75715e"></span>module use <span style="color:#f92672">/</span>home<span style="color:#f92672">/</span><span style="color:#f92672">&lt;</span>USERNAME<span style="color:#f92672">&gt;</span><span style="color:#f92672">/</span>.modules</code></pre></div>
+</span><span style="color:#75715e"></span>module use <span style="color:#f92672">/</span>home<span style="color:#f92672">/&lt;</span>USERNAME<span style="color:#f92672">&gt;/</span>.modules</code></pre></div>
 <p>Replace <code>&lt;USERNAME&gt;</code> with your username. The module use directive points to a
 directory where all of your modules are to be found. The next step is to create
 a module. Assuming that you have created the <code>~/.modules</code> directory, you can add
@@ -390,20 +391,20 @@ a module file to the directory. The typical convention is to create a directory
 naming the software (e.g.<code>~/.modules/mysoftware</code>) and give the module file the
 version of the software as its name, e.g. <code>~/.modules/mysoftware/1.0.0</code>.</p>
 <p>An example of the content of a module file goes as follows:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tcl" data-lang="tcl"><span style="color:#75715e">#</span><span style="color:#75715e">%Module -*- tcl -*-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tcl" data-lang="tcl"><span style="color:#75715e">#%Module -*- tcl -*-
 </span><span style="color:#75715e">
-</span><span style="color:#75715e"></span><span style="color:#75715e">#</span><span style="color:#75715e"> Helpful messages
+</span><span style="color:#75715e"># Helpful messages
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">proc</span> ModulesHelp <span style="color:#66d9ef">{</span> <span style="color:#66d9ef">}</span> <span style="color:#66d9ef">{</span>
-        puts stderr <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">T</span><span style="color:#e6db74">h</span><span style="color:#e6db74">i</span><span style="color:#e6db74">s</span><span style="color:#e6db74"> </span><span style="color:#e6db74">m</span><span style="color:#e6db74">o</span><span style="color:#e6db74">d</span><span style="color:#e6db74">u</span><span style="color:#e6db74">l</span><span style="color:#e6db74">e</span><span style="color:#e6db74"> </span><span style="color:#e6db74">s</span><span style="color:#e6db74">e</span><span style="color:#e6db74">t</span><span style="color:#e6db74">s</span><span style="color:#e6db74"> </span><span style="color:#e6db74">u</span><span style="color:#e6db74">p</span><span style="color:#e6db74"> </span><span style="color:#e6db74">a</span><span style="color:#e6db74">c</span><span style="color:#e6db74">c</span><span style="color:#e6db74">e</span><span style="color:#e6db74">s</span><span style="color:#e6db74">s</span><span style="color:#e6db74"> </span><span style="color:#e6db74">t</span><span style="color:#e6db74">o</span><span style="color:#e6db74"> </span><span style="color:#e6db74">s</span><span style="color:#e6db74">o</span><span style="color:#e6db74">m</span><span style="color:#e6db74">e</span><span style="color:#e6db74">t</span><span style="color:#e6db74">h</span><span style="color:#e6db74">i</span><span style="color:#e6db74">n</span><span style="color:#e6db74">g</span><span style="color:#e6db74">&#34;</span>
+        puts stderr <span style="color:#e6db74">&#34;This module sets up access to something&#34;</span>
 <span style="color:#66d9ef">}</span>
-module-whatis <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">s</span><span style="color:#e6db74">e</span><span style="color:#e6db74">t</span><span style="color:#e6db74">s</span><span style="color:#e6db74"> </span><span style="color:#e6db74">u</span><span style="color:#e6db74">p</span><span style="color:#e6db74"> </span><span style="color:#e6db74">a</span><span style="color:#e6db74">c</span><span style="color:#e6db74">c</span><span style="color:#e6db74">e</span><span style="color:#e6db74">s</span><span style="color:#e6db74">s</span><span style="color:#e6db74"> </span><span style="color:#e6db74">t</span><span style="color:#e6db74">o</span><span style="color:#e6db74"> </span><span style="color:#e6db74">s</span><span style="color:#e6db74">o</span><span style="color:#e6db74">m</span><span style="color:#e6db74">e</span><span style="color:#e6db74">t</span><span style="color:#e6db74">h</span><span style="color:#e6db74">i</span><span style="color:#e6db74">n</span><span style="color:#e6db74">g</span><span style="color:#e6db74">&#34;</span>
+module-whatis <span style="color:#e6db74">&#34;sets up access to something&#34;</span>
 
 prereq somethingelse <span style="color:#960050;background-color:#1e0010">#</span> ensure that this module is loaded before hand
 conflict thatothermodule <span style="color:#960050;background-color:#1e0010">#</span> ensure that this module is NOT loaded
 
 module load gcc <span style="color:#960050;background-color:#1e0010">#</span> you can have the module load dependencies for you
 
-<span style="color:#66d9ef">set</span>          root             <span style="color:#f92672">/</span>home<span style="color:#f92672">/</span><span style="color:#f92672">&lt;</span>USERNAME<span style="color:#f92672">&gt;</span><span style="color:#f92672">/</span>install<span style="color:#f92672">/</span>location <span style="color:#960050;background-color:#1e0010">#</span> a TCL variable
+<span style="color:#66d9ef">set</span>          root             <span style="color:#f92672">/</span>home<span style="color:#f92672">/&lt;</span>USERNAME<span style="color:#f92672">&gt;/</span>install<span style="color:#f92672">/</span>location <span style="color:#960050;background-color:#1e0010">#</span> a TCL variable
 setenv       SOMEVERION       <span style="color:#ae81ff">0.95</span>       <span style="color:#960050;background-color:#1e0010">#</span> set an environment variable
 append<span style="color:#f92672">-</span>path  PATH             $root<span style="color:#f92672">/</span>bin  <span style="color:#960050;background-color:#1e0010">#</span> append to $PATH
 append<span style="color:#f92672">-</span>path  MANPATH          $root<span style="color:#f92672">/</span>man  <span style="color:#960050;background-color:#1e0010">#</span> append to $MANPATH

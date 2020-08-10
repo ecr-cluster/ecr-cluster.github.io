@@ -6,7 +6,7 @@
     <description>Recent content in About on ECR Cluster Documentation Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Dec 2019 15:54:51 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ecr-cluster.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -63,6 +63,16 @@ Repairs The DGX1 node is currently unavailable due to faulty GPU board. There is
     </item>
     
     <item>
+      <title>How To</title>
+      <link>https://ecr-cluster.github.io/docs/how-to/</link>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ecr-cluster.github.io/docs/how-to/</guid>
+      <description>How To Here we provide some guides for various aspects of using the Robotarium cluster. The most important ones are listed directly below &amp;mdash; it is a good idea to familiarise yourselves with these first. Please be aware that some of the guides here are hosted on other sites and will need you to navigate away from here.
+Note: this page is still being populated, if you feel that anything is missing or amiss please contact us and we&amp;rsquo;ll update this page appropriately.</description>
+    </item>
+    
+    <item>
       <title>Publications</title>
       <link>https://ecr-cluster.github.io/publications/</link>
       <pubDate>Sun, 15 Dec 2019 15:54:51 +0100</pubDate>
@@ -80,16 +90,6 @@ Igor Shalyminov, Sungjin Lee, Arash Eshghi, Oliver Lemon. Data-Efficient Goal-Or
       
       <guid>https://ecr-cluster.github.io/sitemap/</guid>
       <description>Sitemap This page provides an index for all of the pages on this site.</description>
-    </item>
-    
-    <item>
-      <title>How To</title>
-      <link>https://ecr-cluster.github.io/docs/how-to/</link>
-      <pubDate>Tue, 13 Aug 2019 16:35:22 +0200</pubDate>
-      
-      <guid>https://ecr-cluster.github.io/docs/how-to/</guid>
-      <description>How To Here we provide some guides for various aspects of using the Robotarium cluster. The most important ones are listed directly below &amp;mdash; it is a good idea to familiarise yourselves with these first. Please be aware that some of the guides here are hosted on other sites and will need you to navigate away from here.
-Note: this page is still being populated, if you feel that anything is missing or amiss please contact us and we&amp;rsquo;ll update this page appropriately.</description>
     </item>
     
     <item>
