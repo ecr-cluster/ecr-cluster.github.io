@@ -1,6 +1,6 @@
 ---
 title: "How To"
-date: 2019-08-13T16:35:22+02:00
+date: 2020-08-10
 type: docs
 ---
 
@@ -22,8 +22,9 @@ Basics
 
 The cluster can only be accessed from within the Heriot-Watt University network.
 Users wishing to use it from outside the university will need to setup an SSH
-tunnel (see [SSH Forwarding](#ssh-forwarding)) or use the HW-VPN (please contact us to give you
-access. HW staff have VPN access per default (see the HW-VPN details).
+tunnel (see [SSH Forwarding](#ssh-forwarding)) or use the HW-VPN (please contact
+us to give you access). HW staff have VPN access per default (see the HW-VPN
+details).
 
 > **Notice**
 > There is a [user portal website](//robotarium.hw.ac.uk/userportal) available
@@ -163,7 +164,7 @@ queues again. They also allow you to specify your program's exact needs.
 > This is a heterogeneous cluster! Not all codes can be run on all nodes! The
 > nodes `gpu01-gpu08` have AMD-based CPUs, the nodes `mic01-mic02` have INTEL-based
 > CPUs. Both are i86 compatible but depending on the level of compiler
-> optimisation your programs may only run one of these two architectures.
+> optimisation your programs may only run on one of these two architectures.
 > Furthermore, your code may or may not expect a certain number or even version
 > of GPU or a MIC to be available. If so, you need to make sure that you specify
 > your needs as precisely as possible; otherwise, your code will fail to run or
@@ -173,8 +174,8 @@ The four most important needs you can specify are:
 
  * the number of nodes you want `--nodes=<n>`
  * which nodes you do or do not want `--nodelist=<name,name,...>` / `--exclude=<name,name,...>`
- * how many cpus you want `-c<n>`
- * which resources (gpus) you want `--gres=<gres,gres,...>`
+ * how many CPUs you want `-c<n>`
+ * which resources (GPUs) you want `--gres=<gres,gres,...>`
 
 Example usage:
 
