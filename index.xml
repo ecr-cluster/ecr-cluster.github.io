@@ -6,11 +6,7 @@
     <description>Recent content in About on ECR Cluster Documentation Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Aug 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://ecr-cluster.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 10 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://ecr-cluster.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Changelog</title>
       <link>https://ecr-cluster.github.io/docs/changelog/</link>
