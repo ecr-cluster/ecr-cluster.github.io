@@ -69,17 +69,6 @@ Note: this page is still being populated, if you feel that anything is missing o
     </item>
     
     <item>
-      <title>Publications</title>
-      <link>https://ecr-cluster.github.io/publications/</link>
-      <pubDate>Sun, 15 Dec 2019 15:54:51 +0100</pubDate>
-      
-      <guid>https://ecr-cluster.github.io/publications/</guid>
-      <description>Publications Here are listed a few publications associated with the cluster. If you would like to have your publications listed here, please use the contact form. Please don&amp;rsquo;t forget to reference the cluster.
-2019 Artjoms Šinkarovs, Hans-Nikolai Vießmann, Sven-Bodo Scholz. 2019. Array Languages Make Neural Networks Fast. arXiv.org. Link: https://arxiv.org/abs/1912.05234v1
-Igor Shalyminov, Sungjin Lee, Arash Eshghi, Oliver Lemon. Data-Efficient Goal-Oriented Conversation with Dialogue Knowledge Transfer Networks. EMNLP 2019. Link: https://arxiv.org/abs/1910.01302</description>
-    </item>
-    
-    <item>
       <title>Sitemap</title>
       <link>https://ecr-cluster.github.io/sitemap/</link>
       <pubDate>Sun, 15 Dec 2019 15:03:18 +0100</pubDate>
@@ -117,6 +106,18 @@ $ ssh &amp;lt;username&amp;gt;@robotarium.hw.ac.uk You can only access the clust
       <guid>https://ecr-cluster.github.io/contact-us/</guid>
       <description>Contact Us If you can not find the answers you are looking for on this site or Google, please fill out the form below and we&amp;rsquo;ll try to answer your query as soon as possible.
 Slack Chat The easiest way to get help from existing users and admin-staff is to use Slack. You will need to be invited to join the chat, so please fill out the form below and we&amp;rsquo;ll invite you 😄.</description>
+    </item>
+    
+    <item>
+      <title>Publications</title>
+      <link>https://ecr-cluster.github.io/publications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ecr-cluster.github.io/publications/</guid>
+      <description>Publications Here are listed a few publications associated with the cluster. If you would like to have your publications listed here, please use the contact form. Please don&amp;rsquo;t forget to reference the cluster.
+2021 Artjoms Šinkarovs, Hans-Nikolai Vießmann, and Sven-Bodo Scholz. Array Languages Make Neural Networks Fast. ARRAY 2021. Link: https://doi.org/10.1145/3460944.3464312
+2020 Hans-Nikolai Vießmann and Sven-Bodo Scholz. Efective Host-GPU Memory Management Through Code Generation. IFL 2020. Link: https://doi.org/10.1145/3462172.3462199
+2019 Artjoms Šinkarovs, Hans-Nikolai Vießmann, Sven-Bodo Scholz.</description>
     </item>
     
   </channel>
