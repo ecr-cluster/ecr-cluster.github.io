@@ -1,6 +1,5 @@
 ---
 title: "Publications"
-date: 2019-12-15T15:54:51+01:00
 type: docs
 ---
 
@@ -11,6 +10,18 @@ Here are listed a few publications associated with the cluster. If you would
 like to have your publications listed here, please use the [contact form]({{<
 relref "/contact-us.md" >}}). Please don't forget to [reference]({{< relref
 "/terms.md" >}}#referencing) the cluster.
+
+2021
+----
+
+Artjoms Šinkarovs, Hans-Nikolai Vießmann, and Sven-Bodo Scholz. Array Languages Make Neural Networks Fast.
+ARRAY 2021. Link: https://doi.org/10.1145/3460944.3464312
+
+2020
+----
+
+Hans-Nikolai Vießmann and Sven-Bodo Scholz. Efective Host-GPU Memory Management Through Code Generation.
+IFL 2020. Link: https://doi.org/10.1145/3462172.3462199
 
 2019
 ----
@@ -30,8 +41,8 @@ Heriot-Watt University, Edinburgh, UK, 13 May 2019. Link: https://arxiv.org/abs/
 2018
 ----
 
-Hans-Nikolai Vießmann, Artjoms Šinkarovs, and Sven-Bodo Scholz. 2018. Extended Memory Reuse: An Optimisation for
-Reducing Memory Allocations. IFL 2018. ACM, New York, NY, USA, 107-118. DOI: https://doi.org/10.1145/3310232.3310242
+Hans-Nikolai Vießmann, Artjoms Šinkarovs, and Sven-Bodo Scholz. Extended Memory Reuse: An Optimisation for
+Reducing Memory Allocations. IFL 2018. Link: https://doi.org/10.1145/3310232.3310242
 
 Igor Shalyminov, Arash Eshghi, and Oliver Lemon. Multi-Task Learning for Domain-General Spoken Disfluency
 Detection in Dialogue Systems. SemDial 2018. Link: http://semdial.org/anthology/papers/Z/Z18/Z18-3008/
