@@ -115,9 +115,8 @@ Slack Chat The easiest way to get help from existing users and admin-staff is to
       
       <guid>https://ecr-cluster.github.io/publications/</guid>
       <description>Publications Here are listed a few publications associated with the cluster. If you would like to have your publications listed here, please use the contact form. Please don&amp;rsquo;t forget to reference the cluster.
-2021 Artjoms Šinkarovs, Hans-Nikolai Vießmann, and Sven-Bodo Scholz. Array Languages Make Neural Networks Fast. ARRAY 2021. Link: https://doi.org/10.1145/3460944.3464312
-2020 Hans-Nikolai Vießmann and Sven-Bodo Scholz. Efective Host-GPU Memory Management Through Code Generation. IFL 2020. Link: https://doi.org/10.1145/3462172.3462199
-2019 Artjoms Šinkarovs, Hans-Nikolai Vießmann, Sven-Bodo Scholz.</description>
+2021 Artjoms Šinkarovs, Hans-Nikolai Vießmann, and Sven-Bodo Scholz. &amp;ldquo;Array Languages Make Neural Networks Fast&amp;rdquo;. ARRAY 2021. Link: https://doi.org/10.1145/3460944.3464312
+Robert Stewart, Andrew Nowlan, Pascal Bacchus, Quentin Ducasse, Ekaterina Komendantskaya. &amp;ldquo;Optimising Hardware Accelerated Neural Networks with Quantisation and a Knowledge Distillation Evolutionary Algorithm&amp;rdquo;.</description>
     </item>
     
   </channel>
