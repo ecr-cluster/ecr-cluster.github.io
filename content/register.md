@@ -9,8 +9,8 @@ type: docs
 Register
 ========
 
-To register, please read the [Terms and Conditions](/terms) and then fill
-out the form below and submit it. You should receive a response on the same day
+To register, please read the [Terms and Conditions](/terms) and then send a message
+to the email given below. You should receive a response on the same day
 (within working hours) or latest next day.
 
 **NOTE:** not all requests to access the cluster will be accepted! Please
@@ -34,4 +34,5 @@ staff (including PhD students) have access to this service already**, everyone
 else will need to specifically request this. Please indicate this in the form
 below._
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfYNC4YV-62epxPXIX-TuMxv1mr0Y1ybVgeLIopMo63sEP12w/viewform?embedded=true" style="width:100%; overflow:hidden;" height="1100px" scrolling="no" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+Please send an E-Mail to <a href="mailto:ishelp@hw.ac.uk">Heriot Watt IS Help</a>
+to register.

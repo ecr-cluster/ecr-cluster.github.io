@@ -15,15 +15,15 @@ What are the available resources on the cluster?
 relref "/docs/the-cluster.md" >}}).
 
 Who maintains the cluster?
-: The cluster is administrated by Hans Viessmann (you can contact him via the
-[contact form](/contact-us)).
+: The cluster is administrated by the staff of Information Services at Heriot Watt
+University. Details to contact them can be found on the [contact page](/contact-us)).
 
 Getting Help
 ------------
 
 What help/support is available?
-: No formal support is provided, other than basic adminstrative tasks and
-maintanence work. Users may contact the administrator for help, such as in the
+: No formal support is provided, other than basic administrative tasks and
+maintenance work. Users may contact the administrator for help, such as in the
 case of install/updating some hardware and/or software. Requests to create
 custom environments or other specialised tasks are not acceptable.
 
