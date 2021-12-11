@@ -9,8 +9,8 @@
 Note: this page is still being populated, if you feel that anything is missing or amiss please contact us and we&rsquo;ll update this page appropriately." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ecr-cluster.github.io/docs/how-to/" /><meta property="article:section" content="docs" />
-<meta property="article:published_time" content="2020-08-10T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2020-08-10T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2020-08-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-08-10T00:00:00+00:00" />
 
 <title>How To | ECR Cluster Documentation Site</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
@@ -19,7 +19,7 @@ Note: this page is still being populated, if you feel that anything is missing o
 <link rel="stylesheet" href="/book.min.d93af08cd075854ea681512ae50cc87032840cea1bdc916af6a31309c2ca3cf1.css" integrity="sha256-2TrwjNB1hU6mgVEq5QzIcDKEDOob3JFq9qMTCcLKPPE=">
 
 
-<script defer src="/en.search.min.f87866b8f32e047f1533c18d993c69c4c446d3dcd78054820946de8cd39e29b3.js" integrity="sha256-&#43;HhmuPMuBH8VM8GNmTxpxMRG09zXgFSCCUbejNOeKbM="></script>
+<script defer src="/en.search.min.9fd5fda19b053d7764c07808467d07dc571c00003119d76a284c1c2d9b1fe5ef.js" integrity="sha256-n9X9oZsFPXdkwHgIRn0H3FccAAAxGddqKEwcLZsf5e8="></script>
 
 <!--
 Made with Book Theme
@@ -184,13 +184,13 @@ you can read about it
 the easiest way to achieve this is by using the SSH <code>ProxyCommand</code> option and
 the <code>-W</code> flag. Together these provide a way to chain SSH connections together.
 An example of this on the command line would be:</p>
-<pre><code>$ ssh -o ProxyCommand='ssh -W %h:%p &lt;USER&gt;@&lt;IP of remote server&gt;' &lt;USER&gt;@&lt;IP of relay server&gt;
+<pre tabindex="0"><code>$ ssh -o ProxyCommand='ssh -W %h:%p &lt;USER&gt;@&lt;IP of remote server&gt;' &lt;USER&gt;@&lt;IP of relay server&gt;
 </code></pre><p>Within the <code>ProxyCommand</code> we specify the remote server and through the <code>-W</code> flag we
 state that we want the connection to be forwarded to the relay server &mdash; this is
 given as the last argument of the SSH command.</p>
 <p>We can simplify this by removing the need to write all that out by placing it
 the <code>~/.ssh/config</code> file. The structure of this would then be:</p>
-<pre><code class="language-sshd" data-lang="sshd">Host SERVER1
+<pre tabindex="0"><code class="language-sshd" data-lang="sshd">Host SERVER1
   HostName 192.168.0.1
   User someone
   IdentityFile ~/.ssh/id_rsa
@@ -274,7 +274,7 @@ will likely be allocated before jobs in other queues.</p>
 </table>
 <p>If users need access to the specialq or have other needs, please contact us.</p>
 <p>Mored details about our queues (partitions) can be found using <code>sinfo</code>. For example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># to get detailed information about the queues (include generic resources)</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># to get detailed information about the queues (include generic resources)</span>
 $ sinfo -o <span style="color:#e6db74">&#34;%15N %10c %10m  %25f %24G&#34;</span> --partition<span style="color:#f92672">=</span>amd-shortq
 NODELIST        CPUS       MEMORY      AVAIL_FEATURES            GRES
 gpu07           <span style="color:#ae81ff">64</span>         <span style="color:#ae81ff">1018366</span>     gpu-host                  gpu:k20:1,gpu:k6000:1
@@ -314,7 +314,7 @@ suffer poor performance!</p>
 <li>which resources (GPUs) you want <code>--gres=&lt;gres,gres,...&gt;</code></li>
 </ul>
 <p>Example usage:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># to run a command and have its output printed in the shell we use the `srun&#39; command</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># to run a command and have its output printed in the shell we use the `srun&#39; command</span>
 $ srun &lt;...command...&gt; &lt;...args...&gt;
 
 <span style="color:#75715e"># another similar example to run an application on an AMD node in the `amd-longq&#39; queue:</span>
@@ -363,7 +363,7 @@ flexibility &mdash; this is especially useful for making use of different versio
 builds of the same software. More information can be found on the <a href="//modules.sourceforge.net/">project
 website</a>.</p>
 <p>Example usage:
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ module avail
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ module avail
 acml/gcc/64/5.3.1
 acml/gcc/fma4/5.3.1
 <span style="color:#75715e"># and many many more modules</span>
@@ -381,7 +381,7 @@ module for a piece of software to work, this can be encoded into the module
 file.</p>
 <p>The first step is to create a <code>.modulerc</code> file your home directory, e.g.
 <code>~/.modulerc</code>. File should contain the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tcl" data-lang="tcl"><span style="color:#75715e">#%Module -*- tcl -*-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tcl" data-lang="tcl"><span style="color:#75715e">#%Module -*- tcl -*-
 </span><span style="color:#75715e">## get extra modules files...
 </span><span style="color:#75715e">
 </span><span style="color:#75715e"></span>module use <span style="color:#f92672">/</span>home<span style="color:#f92672">/&lt;</span>USERNAME<span style="color:#f92672">&gt;/</span>.modules</code></pre></div>
@@ -392,7 +392,7 @@ a module file to the directory. The typical convention is to create a directory
 naming the software (e.g.<code>~/.modules/mysoftware</code>) and give the module file the
 version of the software as its name, e.g. <code>~/.modules/mysoftware/1.0.0</code>.</p>
 <p>An example of the content of a module file goes as follows:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tcl" data-lang="tcl"><span style="color:#75715e">#%Module -*- tcl -*-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tcl" data-lang="tcl"><span style="color:#75715e">#%Module -*- tcl -*-
 </span><span style="color:#75715e">
 </span><span style="color:#75715e"># Helpful messages
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">proc</span> ModulesHelp <span style="color:#66d9ef">{</span> <span style="color:#66d9ef">}</span> <span style="color:#66d9ef">{</span>

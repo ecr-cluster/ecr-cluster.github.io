@@ -35,7 +35,7 @@ Advice and Tips Compiler Flags The PGI developers recommend that a few key flags
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ecr-cluster.github.io/faq/</guid>
-      <description>Frequently Asked Questions Information about the Cluster  What are the available resources on the cluster? A table showing the hardware specifications for all nodes is provided here. Who maintains the cluster? The cluster is administrated by Hans Viessmann (you can contact him via the contact form).  Getting Help  What help/support is available? No formal support is provided, other than basic adminstrative tasks and maintanence work. Users may contact the administrator for help, such as in the case of install/updating some hardware and/or software.</description>
+      <description>Frequently Asked Questions Information about the Cluster  What are the available resources on the cluster? A table showing the hardware specifications for all nodes is provided here. Who maintains the cluster? The cluster is administrated by the staff of Information Services at Heriot Watt University. Details to contact them can be found on the contact page).  Getting Help  What help/support is available? No formal support is provided, other than basic administrative tasks and maintenance work.</description>
     </item>
     
     <item>
@@ -44,7 +44,7 @@ Advice and Tips Compiler Flags The PGI developers recommend that a few key flags
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ecr-cluster.github.io/register/</guid>
-      <description>Register To register, please read the Terms and Conditions and then fill out the form below and submit it. You should receive a response on the same day (within working hours) or latest next day.
+      <description>Register To register, please read the Terms and Conditions and then send a message to the email given below. You should receive a response on the same day (within working hours) or latest next day.
 NOTE: not all requests to access the cluster will be accepted! Please consider the following questions, and use these as a guide to determine whether or not your reason to use the cluster is justified or appropriate:</description>
     </item>
     
@@ -104,8 +104,8 @@ $ ssh &amp;lt;username&amp;gt;@robotarium.hw.ac.uk You can only access the clust
       <pubDate>Tue, 13 Aug 2019 16:02:05 +0200</pubDate>
       
       <guid>https://ecr-cluster.github.io/contact-us/</guid>
-      <description>Contact Us If you can not find the answers you are looking for on this site or Google, please fill out the form below and we&amp;rsquo;ll try to answer your query as soon as possible.
-Slack Chat The easiest way to get help from existing users and admin-staff is to use Slack. You will need to be invited to join the chat, so please fill out the form below and we&amp;rsquo;ll invite you 😄.</description>
+      <description>Contact Us If you can not find the answers you are looking for on this site or Google, please send an E-Mail to Heriot Watt IS Help with your query.
+Slack Chat The easiest way to get help from existing users and admin-staff is to use Slack. You will need to be invited to join the chat; you can receive an invite through the email provided above.</description>
     </item>
     
     <item>

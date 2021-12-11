@@ -19,7 +19,7 @@ Legend    Mark Meaning     #NAME assigned to person with NAME   ### collaborativ
 <link rel="stylesheet" href="/book.min.d93af08cd075854ea681512ae50cc87032840cea1bdc916af6a31309c2ca3cf1.css" integrity="sha256-2TrwjNB1hU6mgVEq5QzIcDKEDOob3JFq9qMTCcLKPPE=">
 
 
-<script defer src="/en.search.min.f87866b8f32e047f1533c18d993c69c4c446d3dcd78054820946de8cd39e29b3.js" integrity="sha256-&#43;HhmuPMuBH8VM8GNmTxpxMRG09zXgFSCCUbejNOeKbM="></script>
+<script defer src="/en.search.min.9fd5fda19b053d7764c07808467d07dc571c00003119d76a284c1c2d9b1fe5ef.js" integrity="sha256-n9X9oZsFPXdkwHgIRn0H3FccAAAxGddqKEwcLZsf5e8="></script>
 
 <!--
 Made with Book Theme
@@ -223,7 +223,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 <h3 id="notes">Notes</h3>
 <p>The main purpose here is to allow users to use Docker images for their work. Main reason is that several vendors/frameworks provide Docker images that are specially optimised (how, and to what degree, is not known) and these optimisation are not available as binary releases (ugh&hellip;). Additionally some user prefer docker as it simplifies managing their environment and maintains a degree of consistency across machines/distros.</p>
-<p>Main problem: docker is insecure for multi-user environments, has no resource management, and requires additional infrastructure/management. Solution: Singularity (<a href="http://singularity.lbl.gov/index.html),">http://singularity.lbl.gov/index.html),</a> which is a tool which converts docker images to binaries - which generate a fs-tree within a chroot. There is no need for a hypervisor or other infrastructure and it works well together with existing management systems like SLURM. Additionally is recommended by Bright Computing (CM provider).</p>
+<p>Main problem: docker is insecure for multi-user environments, has no resource management, and requires additional infrastructure/management. Solution: Singularity (<a href="http://singularity.lbl.gov/index.html)">http://singularity.lbl.gov/index.html)</a>, which is a tool which converts docker images to binaries - which generate a fs-tree within a chroot. There is no need for a hypervisor or other infrastructure and it works well together with existing management systems like SLURM. Additionally is recommended by Bright Computing (CM provider).</p>
 <p>Of course, the usual system updating should be done. In particular CUDA 9.1 is out, so it might be nice for users - especially on <code>dgx01</code>.</p>
 <p>RDMA setup is not working correctly as the <code>ib_srp</code> kernel module has some strange version mismatch meaning it will not load into the kernel&hellip; this is not critical though as SRP protocol is used for accessing SCSI-related resources on a remote system&hellip; as far as I know no-one needs this feature.</p>
 <h2 id="oct-2017-dgx-1-upgrade-ubuntu-14-to-16">(Oct 2017) DGX-1 Upgrade Ubuntu 14 to 16</h2>
@@ -391,7 +391,7 @@ https://github.com/alex-shpak/hugo-book
 <li>These properties though are not what we want, which is to setup GRES Types, in order to distinguish between GPU types. Setting <code>gpus</code> indicates the number of GPUs we have, but not their type. Setting <code>gres</code> allows use to set an arbitrary GRES type, which not useful here. And finally we have <code>gepudevices</code>; this allows use to enter in a list of GPU devices as path references (e.g. <code>/dev/nvidia0</code>). A funny thing about this property is that it no interpreted or sanitised in any way - we can right anything here we want.</li>
 <li>What we want is:</li>
 </ul>
-<pre><code>Name=gpu File=/dev/nvidia0 Type=tesla
+<pre tabindex="0"><code>Name=gpu File=/dev/nvidia0 Type=tesla
 Name=gpu File=/dev/nvidia1 Type=quadro
 </code></pre><ul>
 <li>The <code>gpudevices</code> property fills the space in <code>&lt;&gt;</code>, e.g. <code>Name=gpu File=&lt;&gt;</code></li>
