@@ -15,8 +15,9 @@ What are the available resources on the cluster?
 relref "/docs/the-cluster.md" >}}).
 
 Who maintains the cluster?
-: The cluster is administrated by the staff of Information Services at Heriot Watt
-University. Details to contact them can be found on the [contact page](/contact-us)).
+: The cluster is administrated by the staff of
+[Information Services](//www.hw.ac.uk/uk/services/information-services.htm) at Heriot Watt
+University. Details to contact them can be found on the [contact page](/contact-us).
 
 Getting Help
 ------------
